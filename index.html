@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirugía Bariátrica y Metabólica - [Tu Nombre/Clínica]</title>
+    <meta name="description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo el bypass gástrico por laparoscopia y cuidados postoperatorios.">
+    <meta name="keywords" content="cirugía bariátrica, bypass gástrico, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad">
+    <meta name="author" content="[Tu Nombre/Clínica]">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            color: #374151; /* text-gray-700 */
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('recursos/CocoQx2.jpg'); /* Ruta a tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(8px) brightness(0.9); /* Ajusta el desenfoque y brillo */
+            z-index: -1;
+            opacity: 0.6; /* Ajusta la opacidad del fondo si es muy dominante */
+        }
+
+        /* Estilos para el menú móvil */
+        .mobile-menu-hidden { display: none; }
+        
+        /* Estilos para secciones y tarjetas para que se vean bien sobre el fondo */
+        section > .container {
+            background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semitransparente para contenedores de sección */
+            backdrop-filter: blur(5px); /* Desenfoque adicional para el fondo del contenedor */
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Ajuste para la primera sección después del hero, para que no tenga tanto margen superior si el hero es full screen */
+        main > section:first-of-type > .container {
+             margin-top: 0;
+        }
+
+
+        .hero-bg {
+            background-image: url('https://storage.googleapis.com/generativeai-downloads/images/Folleto_sobre_tratamiento_quiru_rgico_del_paciente_con_obesidad.pdf-page-4-image-1.png'); /* Imagen del folleto para el Hero */
+            background-size: cover;
+            background-position: center;
+            /* background-attachment: fixed; No es necesario si el body::before es fixed */
+        }
+        
+        details > summary {
+            cursor: pointer;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            background-color: rgba(239, 246, 255, 0.7); /* bg-blue-50 con opacidad */
+            border-radius: 0.375rem;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        details > summary:hover {
+            background-color: rgba(219, 234, 254, 0.8); /* bg-blue-100 con opacidad */
+        }
+        details[open] > summary {
+            background-color: rgba(191, 219, 254, 0.8); /* bg-blue-200 con opacidad */
+        }
+        details > div {
+            padding: 1rem;
+            border: 1px solid rgba(219, 234, 254, 0.8);
+            border-top: none;
+            border-radius: 0 0 0.375rem 0.375rem;
+            background-color: rgba(255,255,255,0.7);
+        }
+        h2 { color: #2563EB; /* text-blue-600 */ }
+        h3 { color: #1D4ED8; /* text-blue-700 */ }
+        h4 { color: #1E40AF; /* text-blue-800 */ }
+
+        /* Mejoras para tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: rgba(255,255,255,0.6);
+        }
+        th, td {
+            border: 1px solid #D1D5DB; /* Tailwind gray-300 */
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: rgba(243, 244, 246, 0.7); /* Tailwind gray-100 con opacidad */
+        }
+    </style>
+</head>
+<body class="bg-gray-100"> {/* Un color de fondo fallback si la imagen no carga */}
+
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-blue-600 hover:text-blue-700">[Tu Nombre/Clínica]</a>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#inicio" class="text-gray-600 hover:text-blue-600">Inicio</a>
+                <a href="#que-es-obesidad" class="text-gray-600 hover:text-blue-600">Qué es la Obesidad</a>
+                <a href="#cirugia" class="text-gray-600 hover:text-blue-600">La Cirugía</a>
+                <a href="#postoperatorio" class="text-gray-600 hover:text-blue-600">Postoperatorio</a>
+                <a href="#dieta" class="text-gray-600 hover:text-blue-600">Dieta</a>
+                <a href="#audio-info" class="text-gray-600 hover:text-blue-600">Audio Pacientes</a>
+                <a href="#contacto" class="text-gray-600 hover:text-blue-600">Contacto</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobileMenuButton" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-white shadow-lg absolute w-full z-30">
+            <a href="#inicio" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Inicio</a>
+            <a href="#que-es-obesidad" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Qué es la Obesidad</a>
+            <a href="#cirugia" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">La Cirugía</a>
+            <a href="#postoperatorio" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Postoperatorio</a>
+            <a href="#dieta" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Dieta y Fases</a>
+            <a href="#audio-info" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Audio Pacientes</a>
+            <a href="#contacto" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-bg text-white min-h-screen flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
+                <p class="text-lg md:text-xl mb-8">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca. [cite: 1]</p>
+                <a href="#contacto" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-md text-lg transition duration-300">Solicita más Información</a>
+            </div>
+        </section>
+
+        <section id="que-es-obesidad">
+            <div class="container mx-auto px-6 py-12">
+                <h2 class="text-3xl font-bold text-center mb-8">¿Qué es la Obesidad?</h2>
+                <p class="mb-4">La obesidad hoy en día es considerada la epidemia del siglo XXI. [cite: 2] Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. [cite: 3] Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas. [cite: 4]</p>
+                <p class="mb-4">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. [cite: 5] Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: 128 / (1.60*1.60) = 50. [cite: 6]</p>
+                <h3 class="text-2xl font-semibold mb-4 mt-6">Grados de Obesidad (IMC)</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr><th>Grado</th><th>IMC</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Leve</td><td>27-30</td></tr>
+                            <tr><td>Moderada</td><td>30-35</td></tr>
+                            <tr><td>Severa</td><td>35-40</td></tr>
+                            <tr><td>MÓRBIDA</td><td>40-50</td></tr>
+                            <tr><td>Superobesidad</td><td>50-60</td></tr>
+                            <tr><td>Supersuperobesidad</td><td>60-65</td></tr>
+                            <tr><td>Obesidad triple</td><td>&gt;65</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 mb-4">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida, como Hipertensión Arterial, Diabetes Mellitus, Trastornos del sueño, Apnea, Asma, Artrosis, Dolor de espalda, Reflujo Gastroesofágico, y Alteraciones menstruales. [cite: 8, 10] Por todas estas razones es necesaria la pérdida de peso, y para la mayoría de los pacientes con obesidad patológica la cirugía es la única solución. [cite: 9]</p>
+
+                <h3 class="text-2xl font-semibold mb-4 mt-6">¿Cuándo se debe intervenir a un paciente con obesidad?</h3>
+                <ul class="list-disc list-inside space-y-2 mb-6">
+                    <li>Pacientes con IMC de 30 asociado a comorbilidad. [cite: 12]</li>
+                    <li>Pacientes con IMC mayor o igual a 35. [cite: 12]</li>
+                    <li>Obesidad mantenida durante 5 años con fracaso de otros tratamientos. [cite: 12]</li>
+                    <li>Seguridad en la cooperación del paciente a largo plazo. [cite: 12]</li>
+                    <li>Consentimiento informado y asunción del riesgo quirúrgico. [cite: 12]</li>
+                </ul>
+                <div class="text-center mt-8">
+                    <img src="https://storage.googleapis.com/generativeai-downloads/images/Folleto_sobre_tratamiento_quiru_rgico_del_paciente_con_obesidad.pdf-page-6-image-1.png" alt="Doctora con paciente" class="mx-auto rounded-lg shadow-lg max-w-md w-full">
+                </div>
+            </div>
+        </section>
+
+        <section id="cirugia">
+            <div class="container mx-auto px-6 py-12">
+                <h2 class="text-3xl font-bold text-center mb-8">La Cirugía: Bypass Gástrico por Laparoscopia</h2>
+                <p class="mb-4">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital (endocrinólogos, psicólogos, cirujanos, etc.) que decidirán si el paciente es candidato. [cite: 13] Se realizan valoraciones nutricional, psiquiátrica, preanestésica y quirúrgica. [cite: 14, 16, 19, 23]</p>
+                <p class="mb-4">Al paciente se le explica en qué consiste la técnica quirúrgica, las posibles complicaciones y los resultados, firmando el correspondiente consentimiento informado. [cite: 24] El objetivo del tratamiento quirúrgico es hacerle perder peso y que esta pérdida se mantenga a largo plazo. [cite: 25]</p>
+                <p class="mb-4">La cirugía se realiza bajo anestesia general y mediante laparoscopia, siendo menos agresiva. [cite: 26] Se realiza a través de 5-6 orificios por donde se introducirá el material quirúrgico y de visión. [cite: 27]</p>
+                
+                <h3 class="text-2xl font-semibold mb-4 mt-6">Bypass gástrico en Y de Roux por Laparoscopia</h3>
+                <div class="md:flex md:space-x-6 items-center">
+                    <div class="md:w-1/2">
+                        <p class="mb-3">Consiste en cortar, grapar y seccionar la parte más alta del estómago dejando un estómago pequeño (reservorio gástrico) de aproximadamente 20-30ml. [cite: 29] Seguidamente se divide el intestino y se une con el reservorio, de modo que los alimentos pasan directamente a tramos más lejanos del intestino delgado, ahorrándose la absorción de los alimentos en 1.5 a 2 metros. [cite: 30]</p>
+                        <p class="mb-3">Con esto se come menos, se llega a la sensación de saciedad antes y, al pasar los alimentos a tramos más lejanos del intestino, se reduce la absorción de los alimentos, lo que conlleva pérdida de peso. [cite: 31]</p>
+                    </div>
+                    <div class="md:w-1/2 mt-4 md:mt-0">
+                         <img src="https://storage.googleapis.com/generativeai-downloads/images/Folleto_sobre_tratamiento_quiru_rgico_del_paciente_con_obesidad.pdf-page-5-image-1.png" alt="Diagrama Bypass Gástrico" class="mx-auto rounded-lg shadow-lg w-full max-w-sm">
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold mb-4 mt-8">Preparación Preoperatoria</h3>
+                <p class="mb-4">El paciente ingresa un día antes de la cirugía. [cite: 32] Como tratamiento previo se administra terapia para evitar vómitos, antibióticos y terapia antitrombótica. [cite: 33] El paciente debe ducharse antes de la cirugía, insistiendo en el abdomen. [cite: 34] Si tiene vello en el abdomen, se rasurará con maquinilla eléctrica. [cite: 35]</p>
+            </div>
+        </section>
+
+        <section id="postoperatorio">
+            <div class="container mx-auto px-6 py-12">
+                <h2 class="text-3xl font-bold text-center mb-8">Manejo y Seguimiento Postoperatorio</h2>
+                <h3 class="text-2xl font-semibold mb-3">Inmediato Postoperatorio</h3>
+                <p class="mb-2">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. [cite: 37] Saldrá sin sonda nasal ni vesical, con medias de compresión y algunos con drenaje abdominal. [cite: 39] Podrá levantarse cuando esté en la habitación, con precaución la primera vez. [cite: 40] Es frecuente dolor en el hombro izquierdo y malestar abdominal. [cite: 42] Si hay buena tolerancia, el alta es al 1º-2º día postoperatorio. [cite: 44]</p>
+                <p class="mb-4">Al inicio de la alimentación líquida (24-48h después), notará plenitud. Beba con pajita o cucharadas lentamente. [cite: 45, 46] Se darán recomendaciones y tratamientos al alta: dieta bariátrica por fases, heparina subcutánea (25-30 días), omeprazol, complejo vitamínico y módulo proteico. [cite: 47, 48]</p>
+                
+                <h3 class="text-2xl font-semibold mb-3 mt-6">Primeros Días en Casa</h3>
+                <p class="mb-2">Puede presentar dolor abdominal difuso, no muy intenso, manejable con paracetamol diluido. [cite: 55, 56] Mejorará el dolor torácico al respirar con fisioterapia respiratoria (inflar globos). [cite: 57, 58] No debería vomitar ni doler el estómago; si ocurre, suele ser por comer rápido o en exceso. [cite: 59]</p>
+                <p class="font-semibold text-red-600 mb-4">Importante: No tomará ningún alimento sólido ni bebida con gas. Existe peligro de complicación (dehiscencia de suturas, fístulas) si toma alimentos sólidos. [cite: 60]</p>
+                
+                <h3 class="text-2xl font-semibold mb-3 mt-6">Seguimiento a Largo Plazo</h3>
+                <p class="mb-4">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. [cite: 49] Es FUNDAMENTAL estar motivado, bien informado y aceptar el compromiso de seguir las indicaciones de por vida. [cite: 50] Las revisiones en cirugía son a la semana, 15 días, al mes, a los 3, 6, 12, 18, 24 meses y luego anual hasta 5 años mínimo. [cite: 52] Se realizan ecografías y tránsito gastrointestinal (TEGD) para valoración. [cite: 53]</p>
+                <div class="text-center mt-8">
+                    <img src="https://storage.googleapis.com/generativeai-downloads/images/Folleto_sobre_tratamiento_quiru_rgico_del_paciente_con_obesidad.pdf-page-8-image-1.png" alt="Seguimiento médico" class="mx-auto rounded-lg shadow-lg max-w-md w-full">
+                </div>
+            </div>
+        </section>
+
+        <section id="dieta">
+            <div class="container mx-auto px-6 py-12">
+                <h2 class="text-3xl font-bold text-center mb-8">Dieta Postoperatoria por Fases</h2>
+                <p class="text-center mb-6">La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.</p>
+
+                <details class="mb-3">
+                    <summary>FASE 1: Protección de la Cirugía (Primeros 7 días)</summary>
+                    <div class="space-y-2">
+                        <p><strong>Duración:</strong> 7 primeros días. [cite: 62]</p>
+                        <p><strong>Objetivos:</strong> Garantizar consolidación de suturas (dieta líquida), protección y prevención de dilatación del reservorio gástrico (limitación de volumen). [cite: 66]</p>
+                        <p><strong>Dieta:</strong> Textura líquida con control de volumen (iniciar con 30ml, máximo 50ml por toma en Bypass). [cite: 67, 68, 69] Ingesta lenta y fraccionada (6-8 tomas/día). [cite: 70] Hidratación con agua fuera de tomas (300-500ml/día). [cite: 70, 73] Agua puede ser difícil de tolerar; aromatizar con limón/naranja puede ayudar. [cite: 71, 72]</p>
+                        <p><strong>Alimentos:</strong> Agua, infusiones, zumos naturales diluidos y colados, lácteos líquidos desnatados (preferible sin lactosa), bebida vegetal, caldos de verduras y desgrasados de pollo/pavo. [cite: 75] Evitar café y diuréticos hasta cubrir hidratación. [cite: 76] Fundamental el aporte proteico con módulo prescrito (7-8 cucharadas soperas para bypass). [cite: 87] Eliminar azúcar, usar canela, stevia, sucralosa, eritritol o cacao 100%. [cite: 88]</p>
+                        <p><strong>Recomendaciones:</strong> Incorporar alimentos nuevos de uno en uno. [cite: 89] Beber líquidos 30 min antes y 1h después de comidas. [cite: 91] Tomas deben durar 30-45 min. [cite: 91] No líquidos rápidos, ni en grandes sorbos, ni a temperaturas extremas, ni azucarados, ni gaseosos. [cite: 91] Prohibido FUMAR. [cite: 91] Dejar de comer si hay plenitud o dolor. [cite: 92] Evitar agacharse/acostarse 1h post-ingesta. [cite: 92]</p>
+                    </div>
+                </details>
+
+                <details class="mb-3">
+                    <summary>FASE 2: Protección Quirúrgica (Siguientes 15 días)</summary>
+                    <div class="space-y-2">
+                        <p><strong>Duración:</strong> 15 días (tras Fase 1). [cite: 97]</p>
+                        <p><strong>Dieta:</strong> Textura semilíquida (crema), volumen 100-150ml. [cite: 102] Ingesta lenta y fraccionada (5-6 tomas/día). [cite: 103]</p>
+                        <p><strong>Alimentos:</strong> Patata, verduras cocidas, frutas cocidas/horneadas (limitar alto contenido en fibra insoluble). [cite: 104] Yogur, requesón, sopa de fideos muy cocidos. [cite: 113] Pan tostado tipo biscote (NO ENTERO). [cite: 114] Mantener módulo proteico e iniciar suplemento multivitamínico-mineral. [cite: 115]</p>
+                    </div>
+                </details>
+
+                <details class="mb-3">
+                    <summary>FASE 3: Protección Quirúrgica (Siguientes 15 días)</summary>
+                    <div class="space-y-2">
+                        <p><strong>Duración:</strong> 15 días (tras Fase 2). [cite: 126]</p>
+                        <p><strong>Dieta:</strong> Textura semisólida (puré), volumen no superior a 150ml por toma. [cite: 132, 133] Ingesta lenta y fraccionada (5-6 tomas/día). [cite: 134]</p>
+                        <p><strong>Alimentos:</strong> Legumbres sin piel, carnes blancas (pavo, pollo), pescado blanco, huevos. [cite: 135] Cocción que mantenga hidratación (hervido, vapor, horno, microondas). [cite: 136] Fruta cruda (evitando fibra insoluble). [cite: 137] Ya no se toma módulo proteico, pero se mantiene suplemento multivitamínico de por vida. [cite: 138]</p>
+                    </div>
+                </details>
+
+                <details class="mb-3">
+                    <summary>FASE 4: Protección Quirúrgica (15 a 30 días)</summary>
+                    <div class="space-y-2">
+                        <p><strong>Duración:</strong> 15 a 30 días (tras Fase 3). [cite: 150]</p>
+                        <p><strong>Dieta:</strong> Textura sólida de fácil masticación ("machacamiento manual con tenedor"), volumen 150-200ml. [cite: 152] La boca debe ser el triturador previo. [cite: 153] No se introducen nuevos alimentos en esta fase. [cite: 155] Progresión en técnicas de cocción: hervido, vapor, horno, microondas y luego plancha. [cite: 156]</p>
+                        <p><strong>Clave:</strong> Masticación y trituración oral son la clave. Ingesta rápida sin masticación adecuada puede causar dolor. [cite: 167, 168]</p>
+                    </div>
+                </details>
+
+                <details class="mb-3">
+                    <summary>FASE 5: Tolerancia (Dieta Normalizada y Saludable)</summary>
+                    <div class="space-y-2">
+                        <p><strong>Duración:</strong> Una vez finalizada la Fase 4. [cite: 172]</p>
+                        <p><strong>Dieta:</strong> Progresiva introducción de alimentos más difíciles de tolerar: carnes blancas fibrosas (conejo), pescados azules, carnes rojas, pescados duros (sepia, calamar), verduras crudas de hoja verde, tomate (inicialmente sin piel), cereales y derivados (arroz, pasta, pan), frutas (cítricos). [cite: 181] No se modifica la textura, pero introducir con progresión en técnicas culinarias. [cite: 182, 183] Volumen 150-200ml. [cite: 185] Priorizar alimentos proteicos si no se alcanza objetivo por ingesta. [cite: 186]</p>
+                        <p><strong>Alimentación variada y equilibrada:</strong> Frecuencias específicas para pescado blanco/azul, carnes blancas/rojas, legumbres, huevos, cereales, tubérculos, verduras, frutas, lácteos. [cite: 187]</p>
+                    </div>
+                </details>
+                <div class="text-center mt-8">
+                    <img src="https://storage.googleapis.com/generativeai-downloads/images/Folleto_sobre_tratamiento_quiru_rgico_del_paciente_con_obesidad.pdf-page-13-image-1.png" alt="Alimentación saludable" class="mx-auto rounded-lg shadow-lg max-w-lg w-full">
+                </div>
+            </div>
+        </section>
+        
+        <section id="audio-info">
+            <div class="container mx-auto px-6 py-12 text-center">
+                <h2 class="text-3xl font-bold mb-6">Información Adicional para Pacientes</h2>
+                <p class="mb-4">Escucha esta guía con información importante sobre tu proceso:</p>
+                <audio controls class="mx-auto shadow-lg rounded-md">
+                    <source src="recursos/guiapacientes.mp3" type="audio/mpeg">
+                    <source src="recursos/guiapacientes.m4a" type="audio/mp4">
+                    Tu navegador no soporta el elemento de audio. Por favor, intenta descargar el archivo desde un enlace (si es proporcionado).
+                </audio>
+            </div>
+        </section>
+
+        <section id="contacto" class="bg-gray-50"> {/* Damos un fondo ligero a esta sección por si el general es muy oscuro */}
+            <div class="container mx-auto px-6 py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold">Contáctanos y Da el Primer Paso</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.</p>
+                </div>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-xl border border-gray-200">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo <span class="text-red-500">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono" name="telefono" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje <span class="text-red-500">*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-md transition duration-300 shadow-md hover:shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-10 text-center">
+                        <p class="text-gray-700 mb-3">O si lo prefieres:</p>
+                        <a href="https://wa.me/TUNUMERODETELEFONO?text=Hola,%20deseo%20más%20información%20sobre%20la%20cirugía%20bariátrica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 shadow-md hover:shadow-lg mb-4">
+                            <i class="fab fa-whatsapp fa-lg mr-3"></i> Chatear por WhatsApp
+                        </a>
+                        <div class="mt-6 text-sm text-gray-600 space-y-1">
+                            <p><i class="fas fa-phone-alt mr-2 text-blue-500"></i>Teléfono: [Tu Teléfono de Contacto]</p>
+                            <p><i class="fas fa-envelope mr-2 text-blue-500"></i>Email: [Tu Email de Contacto]</p>
+                            <p><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Ubicación: Hospital Clínico Universitario Virgen de la Arrixaca, Murcia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-700 text-white py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">&copy; <span id="currentYear"></span> [Tu Nombre/Clínica]. Todos los derechos reservados.</p>
+            <p class="text-sm mb-1">Unidad de Cirugía Bariátrica y Metabólica</p>
+            <p class="text-xs">Hospital Clínico Universitario Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, España.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para el menú móvil
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('mobile-menu-hidden');
+            });
+            // Cerrar menú al hacer clic en un enlace
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('mobile-menu-hidden');
+                });
+            });
+        }
+
+        // Script para el año actual en el footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Script para el formulario de contacto (solo previene el envío y muestra alerta por ahora)
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.');
+                // Aquí iría la lógica para enviar el formulario usando fetch() o XMLHttpRequest
+                // Por ejemplo: enviar a un servicio como Formspree, Netlify Forms, o un backend propio.
+            });
+        }
+    </script>
+
+</body>
+</html>
