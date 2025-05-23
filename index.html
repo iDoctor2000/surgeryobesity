@@ -21,23 +21,38 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             color: #374151; /* text-slate-700 */
-            background-color: #f8fafc; /* bg-slate-50 como fondo base general */
+            background-color: #f8fafc; /* bg-slate-50 como fondo base general si body::before no carga o es muy sutil */
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.92), rgba(255,255,255,0.85)), url('recursos/CocoQx2.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.4; 
+            /* filter: grayscale(50%); */
+            z-index: -1;
         }
 
         .mobile-menu-hidden { display: none; }
         
-        section { /* Espaciado general para secciones */
+        section { 
             padding-top: 2rem;
             padding-bottom: 2rem;
         }
-        @media (min-width: 768px) { /* md: */
+        @media (min-width: 768px) { 
             section {
                 padding-top: 3rem;
                 padding-bottom: 3rem;
             }
         }
         
-        /* Contenedor de contenido principal dentro de las secciones */
         .section-container {
              background-color: #ffffff; 
              border-radius: 0.5rem; /* rounded-lg */
@@ -52,7 +67,7 @@
         
         .hero-bg {
             background-color: #1e3a8a; /* Azul oscuro (blue-900) */
-            background-image: url('recursos/img/hero-background.jpg'); /* RUTA SUGERIDA */
+            background-image: url('recursos/img/hero-background.jpg'); 
             background-size: cover;
             background-position: center;
         }
@@ -70,8 +85,8 @@
             justify-content: space-between;
             align-items: center;
         }
-        details > summary::after { /* Indicador de flecha */
-            content: '\f078'; /* FontAwesome down arrow */
+        details > summary::after { 
+            content: '\f078'; 
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             transition: transform 0.3s;
@@ -91,11 +106,11 @@
             border: 1px solid #e0f2fe; /* sky-100 */
             border-top: none;
             border-radius: 0 0 0.375rem 0.375rem; /* rounded-b-md */
-            background-color: #f8fafc; /* slate-50 (ligeramente diferente al blanco puro para contraste) */
+            background-color: #f8fafc; /* slate-50 */
         }
 
-        h1, h2, h3, h4 { font-weight: 700; } /* bold */
-        h1 { color: #FFFFFF; /* Para el hero, sobre fondo oscuro */ }
+        h1, h2, h3, h4 { font-weight: 700; } 
+        h1 { color: #FFFFFF; }
         h2 { color: #1e3a8a; /* text-blue-900 */ margin-bottom: 1.5rem; /* mb-6 */ font-size: 1.875rem; line-height: 2.25rem; /* text-3xl */ }
         @media (min-width: 768px) { h2 { font-size: 2.25rem; line-height: 2.5rem; /* md:text-4xl */ } }
         h3 { color: #1d4ed8; /* text-blue-700 */ margin-bottom: 1rem; /* mb-4 */ margin-top: 1.5rem; /* mt-6 */ font-size: 1.5rem; line-height: 2rem; /* text-2xl */ }
@@ -104,12 +119,12 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem; /* my-4 */
-            margin-bottom: 1rem; /* my-4 */
+            margin-top: 1rem; 
+            margin-bottom: 1rem; 
             background-color: #FFFFFF;
             box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1); /* shadow-sm */
             border-radius: 0.375rem; /* rounded-md */
-            overflow: hidden; /* Para que el border-radius afecte a las celdas */
+            overflow: hidden; 
         }
         th, td {
             border: 1px solid #e5e7eb; /* gray-200 */
@@ -123,7 +138,7 @@
             color: #111827; /* gray-900 */
         }
         tbody tr:nth-child(even) {
-            background-color: #f9fafb; /* Un sutil striping para las filas */
+            background-color: #f9fafb; 
         }
 
         .btn-primary {
@@ -133,26 +148,28 @@
             padding: 0.75rem 2rem; /* py-3 px-8 */
             border-radius: 0.375rem; /* rounded-md */
             transition: background-color 0.3s ease;
-            display: inline-block; /* Para que el padding funcione bien */
+            display: inline-block; 
             text-align: center;
         }
         .btn-primary:hover {
             background-color: #047857; /* emerald-700 */
         }
-        .btn-secondary { /* Un estilo para botones secundarios si los necesitas */
-            background-color: #e0f2fe; /* sky-100 */
-            color: #0c4a6e; /* sky-800 */
-            font-weight: 600; /* semibold */
-            padding: 0.625rem 1.5rem; /* py-2.5 px-6 */
-            border-radius: 0.375rem; /* rounded-md */
-            border: 1px solid #7dd3fc; /* sky-300 */
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            text-align: center;
+        .video-container { /* Contenedor para los videos */
+            margin-top: 1.5rem; /* my-6 */
+            margin-bottom: 1.5rem; /* my-6 */
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 42rem; /* max-w-xl, ajusta según necesites */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); /* shadow-lg */
+            overflow: hidden; /* Para que el borde redondeado afecte al video */
         }
-        .btn-secondary:hover {
-            background-color: #bae6fd; /* sky-200 */
+        .video-container video {
+            display: block; /* Para eliminar espacio extra debajo del video */
+            width: 100%;
+            height: auto;
         }
+
     </style>
 </head>
 <body class="bg-slate-50">
@@ -188,7 +205,7 @@
 
     <main>
         <section id="inicio" class="hero-bg text-white min-h-screen flex items-center justify-center relative py-16 md:py-24">
-            <div class="absolute inset-0 bg-black opacity-60 z-0"></div> {/* Aumenté un poco la opacidad para mejor contraste del texto */}
+            <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
             <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
                 <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.</p>
@@ -200,7 +217,15 @@
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">¿Qué es la Obesidad?</h2>
                 <p class="mb-4 text-gray-700">La obesidad hoy en día es considerada la epidemia del siglo XXI. Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas.</p>
-                <p class="mb-4 text-gray-700">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \times 1.60) = 50$.</p>
+                
+                <div class="video-container">
+                    <video autoplay loop muted playsinline poster="recursos/img/poster_cartoon_obesidad.jpg"> {/* Considera crear un poster */}
+                        <source src="recursos/ideo_cartoonobesidad.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+                
+                <p class="mt-6 mb-4 text-gray-700">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \times 1.60) = 50$.</p>
                 
                 <h3 class="mt-8">Grados de Obesidad (IMC)</h3>
                 <div class="overflow-x-auto shadow-md rounded-lg">
@@ -219,7 +244,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="mt-6 mb-4 text-gray-700">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida, como Hipertensión Arterial, Diabetes Mellitus, Trastornos del sueño, Apnea, Asma, Artrosis, Dolor de espalda, Reflujo Gastroesofágico, y Alteraciones menstruales. Por todas estas razones es necesaria la pérdida de peso, y para la mayoría de los pacientes con obesidad patológica la cirugía es la única solución.</p>
+                <p class="mt-6 mb-4 text-gray-700">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida [...]</p>
 
                 <h3 class="mt-8">¿Cuándo se debe intervenir a un paciente con obesidad?</h3>
                 <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700 pl-4">
@@ -229,32 +254,34 @@
                     <li>Seguridad en la cooperación del paciente a largo plazo.</li>
                     <li>Consentimiento informado y asunción del riesgo quirúrgico.</li>
                 </ul>
-                <div class="text-center mt-8">
-                    <img src="recursos/img/doctor-paciente-consulta.jpg" alt="Doctora con paciente" class="mx-auto rounded-lg shadow-lg max-w-md w-full">
                 </div>
-            </div>
         </section>
 
-        <section id="cirugia" class="bg-slate-100 py-12 md:py-16"> {/* Fondo alterno para esta sección */}
+        <section id="cirugia" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">La Cirugía: Bypass Gástrico por Laparoscopia</h2>
-                <p class="mb-4 text-gray-700">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital (endocrinólogos, psicólogos, cirujanos, etc.) que decidirán si el paciente es candidato. Se realizan valoraciones nutricional, psiquiátrica, preanestésica y quirúrgica.</p>
-                <p class="mb-4 text-gray-700">Al paciente se le explica en qué consiste la técnica quirúrgica, las posibles complicaciones y los resultados, firmando el correspondiente consentimiento informado. El objetivo del tratamiento quirúrgico es hacerle perder peso y que esta pérdida se mantenga a largo plazo.</p>
-                <p class="mb-4 text-gray-700">La cirugía se realiza bajo anestesia general y mediante laparoscopia, siendo menos agresiva. Se realiza a través de 5-6 orificios por donde se introducirá el material quirúrgico y de visión.</p>
+                <p class="mb-4 text-gray-700">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital [...]</p>
+                <p class="mb-4 text-gray-700">Al paciente se le explica en qué consiste la técnica quirúrgica [...]</p>
+                <p class="mb-4 text-gray-700">La cirugía se realiza bajo anestesia general y mediante laparoscopia [...]</p>
                 
                 <h3 class="mt-8">Bypass gástrico en Y de Roux por Laparoscopia</h3>
                 <div class="md:flex md:space-x-8 items-center mt-6">
                     <div class="md:w-1/2 text-gray-700">
-                        <p class="mb-3">Consiste en cortar, grapar y seccionar la parte más alta del estómago dejando un estómago pequeño (reservorio gástrico) de aproximadamente 20-30ml. Seguidamente se divide el intestino y se une con el reservorio, de modo que los alimentos pasan directamente a tramos más lejanos del intestino delgado, ahorrándose la absorción de los alimentos en 1.5 a 2 metros.</p>
-                        <p class="mb-3">Con esto se come menos, se llega a la sensación de saciedad antes y, al pasar los alimentos a tramos más lejanos del intestino, se reduce la absorción de los alimentos, lo que conlleva pérdida de peso.</p>
+                        <p class="mb-3">Consiste en cortar, grapar y seccionar la parte más alta del estómago [...]</p>
+                        <p class="mb-3">Con esto se come menos, se llega a la sensación de saciedad antes [...]</p>
                     </div>
                     <div class="md:w-1/2 mt-6 md:mt-0">
-                         <img src="recursos/img/bypass-gastrico-diagrama.png" alt="Diagrama Bypass Gástrico" class="mx-auto rounded-lg shadow-lg w-full max-w-md">
+                         <div class="video-container">
+                            <video controls playsinline preload="metadata" poster="recursos/img/poster_laparoscopica.jpg"> {/* Considera crear un poster */}
+                                <source src="recursos/Video_Laparoscopica.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
                     </div>
                 </div>
 
                 <h3 class="mt-10">Preparación Preoperatoria</h3>
-                <p class="mb-4 text-gray-700">El paciente ingresa un día antes de la cirugía. Como tratamiento previo se administra terapia para evitar vómitos, antibióticos y terapia antitrombótica. El paciente debe ducharse antes de la cirugía, insistiendo en el abdomen. Si tiene vello en el abdomen, se rasurará con maquinilla eléctrica.</p>
+                <p class="mb-4 text-gray-700">El paciente ingresa un día antes de la cirugía. [...]</p>
             </div>
         </section>
 
@@ -262,17 +289,21 @@
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">Manejo y Seguimiento Postoperatorio</h2>
                 <h3 class="mt-8">Inmediato Postoperatorio</h3>
-                <p class="mb-2 text-gray-700">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. Saldrá sin sonda nasal ni vesical, con medias de compresión y algunos con drenaje abdominal. Podrá levantarse cuando esté en la habitación, con precaución la primera vez. Es frecuente dolor en el hombro izquierdo y malestar abdominal. Si hay buena tolerancia, el alta es al 1º-2º día postoperatorio.</p>
-                <p class="mb-4 text-gray-700">Al inicio de la alimentación líquida (24-48h después), notará plenitud. Beba con pajita o cucharadas lentamente. Se darán recomendaciones y tratamientos al alta: dieta bariátrica por fases, heparina subcutánea (25-30 días), omeprazol, complejo vitamínico y módulo proteico.</p>
+                <p class="mb-2 text-gray-700">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. [...]</p>
+                <p class="mb-4 text-gray-700">Al inicio de la alimentación líquida (24-48h después), notará plenitud. [...]</p>
                 
                 <h3 class="mt-8">Primeros Días en Casa</h3>
-                <p class="mb-2 text-gray-700">Puede presentar dolor abdominal difuso, no muy intenso, manejable con paracetamol diluido. Mejorará el dolor torácico al respirar con fisioterapia respiratoria (inflar globos). No debería vomitar ni doler el estómago; si ocurre, suele ser por comer rápido o en exceso.</p>
-                <p class="font-semibold text-red-600 mb-4 bg-red-50 p-3 rounded-md"><i class="fas fa-exclamation-triangle mr-2"></i>Importante: No tomará ningún alimento sólido ni bebida con gas. Existe peligro de complicación (dehiscencia de suturas, fístulas) si toma alimentos sólidos.</p>
+                <p class="mb-2 text-gray-700">Puede presentar dolor abdominal difuso, no muy intenso [...]</p>
+                <p class="font-semibold text-red-600 mb-4 bg-red-50 p-3 rounded-md"><i class="fas fa-exclamation-triangle mr-2"></i>Importante: No tomará ningún alimento sólido ni bebida con gas. [...]</p>
                 
                 <h3 class="mt-8">Seguimiento a Largo Plazo</h3>
-                <p class="mb-4 text-gray-700">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. Es FUNDAMENTAL estar motivado, bien informado y aceptar el compromiso de seguir las indicaciones de por vida. Las revisiones en cirugía son a la semana, 15 días, al mes, a los 3, 6, 12, 18, 24 meses y luego anual hasta 5 años mínimo. Se realizan ecografías y tránsito gastrointestinal (TEGD) para valoración.</p>
-                <div class="text-center mt-8">
-                    <img src="recursos/img/seguimiento-medico.jpg" alt="Seguimiento médico" class="mx-auto rounded-lg shadow-lg max-w-md w-full">
+                <p class="mb-4 text-gray-700">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. [...]</p>
+                
+                <div class="video-container">
+                     <video controls playsinline preload="metadata" poster="recursos/img/poster_medico_paciente.jpg"> {/* Considera crear un poster */}
+                        <source src="recursos/Medico_y_Paciente.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                 </div>
             </div>
         </section>
@@ -281,48 +312,36 @@
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">Dieta Postoperatoria por Fases</h2>
                 <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto">La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.</p>
-
                 <div class="space-y-4">
                     <details class="mb-3">
                         <summary>FASE 1: Protección de la Cirugía (Primeros 7 días)</summary>
                         <div class="space-y-2 text-gray-700">
                              <p><strong>Duración:</strong> 7 primeros días.</p>
-                             <p><strong>Objetivos:</strong> Garantizar consolidación de suturas (dieta líquida), protección y prevención de dilatación del reservorio gástrico (limitación de volumen).</p>
-                             <p><strong>Dieta:</strong> Textura líquida con control de volumen (iniciar con 30ml, máximo 50ml por toma en Bypass). Ingesta lenta y fraccionada (6-8 tomas/día). Hidratación con agua fuera de tomas (300-500ml/día). Agua puede ser difícil de tolerar; aromatizar con limón/naranja puede ayudar.</p>
-                             <p><strong>Alimentos:</strong> Agua, infusiones, zumos naturales diluidos y colados, lácteos líquidos desnatados (preferible sin lactosa), bebida vegetal, caldos de verduras y desgrasados de pollo/pavo. Evitar café y diuréticos hasta cubrir hidratación. Fundamental el aporte proteico con módulo prescrito (7-8 cucharadas soperas para bypass). Eliminar azúcar, usar canela, stevia, sucralosa, eritritol o cacao 100%.</p>
-                             <p><strong>Recomendaciones:</strong> Incorporar alimentos nuevos de uno en uno. Beber líquidos 30 min antes y 1h después de comidas. Tomas deben durar 30-45 min. No líquidos rápidos, ni en grandes sorbos, ni a temperaturas extremas, ni azucarados, ni gaseosos. Prohibido FUMAR. Dejar de comer si hay plenitud o dolor. Evitar agacharse/acostarse 1h post-ingesta.</p>
+                             <p>[...]</p>
                         </div>
                     </details>
                      <details class="mb-3">
                         <summary>FASE 2: Protección Quirúrgica (Siguientes 15 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> 15 días (tras Fase 1).</p>
-                            <p><strong>Dieta:</strong> Textura semilíquida (crema), volumen 100-150ml. Ingesta lenta y fraccionada (5-6 tomas/día).</p>
-                            <p><strong>Alimentos:</strong> Patata, verduras cocidas, frutas cocidas/horneadas (limitar alto contenido en fibra insoluble). Yogur, requesón, sopa de fideos muy cocidos. Pan tostado tipo biscote (NO ENTERO). Mantener módulo proteico e iniciar suplemento multivitamínico-mineral.</p>
+                            <p>[...]</p>
                         </div>
                     </details>
                     <details class="mb-3">
                         <summary>FASE 3: Protección Quirúrgica (Siguientes 15 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> 15 días (tras Fase 2).</p>
-                            <p><strong>Dieta:</strong> Textura semisólida (puré), volumen no superior a 150ml por toma. Ingesta lenta y fraccionada (5-6 tomas/día).</p>
-                            <p><strong>Alimentos:</strong> Legumbres sin piel, carnes blancas (pavo, pollo), pescado blanco, huevos. Cocción que mantenga hidratación (hervido, vapor, horno, microondas). Fruta cruda (evitando fibra insoluble). Ya no se toma módulo proteico, pero se mantiene suplemento multivitamínico de por vida.</p>
+                           <p>[...]</p>
                         </div>
                     </details>
                     <details class="mb-3">
                         <summary>FASE 4: Protección Quirúrgica (15 a 30 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> 15 a 30 días (tras Fase 3).</p>
-                            <p><strong>Dieta:</strong> Textura sólida de fácil masticación ("machacamiento manual con tenedor"), volumen 150-200ml. La boca debe ser el triturador previo. No se introducen nuevos alimentos en esta fase. Progresión en técnicas de cocción: hervido, vapor, horno, microondas y luego plancha.</p>
-                            <p><strong>Clave:</strong> Masticación y trituración oral son la clave. Ingesta rápida sin masticación adecuada puede causar dolor.</p>
+                            <p>[...]</p>
                         </div>
                     </details>
                     <details class="mb-3">
                         <summary>FASE 5: Tolerancia (Dieta Normalizada y Saludable)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> Una vez finalizada la Fase 4.</p>
-                            <p><strong>Dieta:</strong> Progresiva introducción de alimentos más difíciles de tolerar: carnes blancas fibrosas (conejo), pescados azules, carnes rojas, pescados duros (sepia, calamar), verduras crudas de hoja verde, tomate (inicialmente sin piel), cereales y derivados (arroz, pasta, pan), frutas (cítricos). No se modifica la textura, pero introducir con progresión en técnicas culinarias. Volumen 150-200ml. Priorizar alimentos proteicos si no se alcanza objetivo por ingesta.</p>
-                            <p><strong>Alimentación variada y equilibrada:</strong> Frecuencias específicas para pescado blanco/azul, carnes blancas/rojas, legumbres, huevos, cereales, tubérculos, verduras, frutas, lácteos.</p>
+                            <p>[...]</p>
                         </div>
                     </details>
                 </div>
@@ -345,7 +364,7 @@
         </section>
 
         <section id="contacto" class="bg-slate-100 py-16 md:py-24">
-            <div class="container mx-auto px-4 sm:px-6">
+             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl lg:text-4xl font-bold text-blue-900">Contáctanos y Da el Primer Paso</h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.</p>
@@ -405,7 +424,6 @@
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('mobile-menu-hidden');
-                // Cambiar icono de hamburguesa a X y viceversa
                 const icon = mobileMenuButton.querySelector('i');
                 if (mobileMenu.classList.contains('mobile-menu-hidden')) {
                     icon.classList.remove('fa-times');
@@ -424,22 +442,18 @@
             });
         }
 
-        // Script para el año actual en el footer
         const currentYearSpan = document.getElementById('currentYear');
         if (currentYearSpan) {
             currentYearSpan.textContent = new Date().getFullYear();
         }
 
-        // Script para el formulario de contacto
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault();
-                // Aquí puedes añadir una animación de "enviando..."
-                // Simulación de envío
                 setTimeout(() => {
                     alert('Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.');
-                    contactForm.reset(); // Limpia el formulario
+                    contactForm.reset(); 
                 }, 1000);
             });
         }
