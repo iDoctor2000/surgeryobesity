@@ -6,7 +6,7 @@
     
     <title>Cirugía Bariátrica y Metabólica - Especialistas en Obesidad</title>
     <meta name="description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo bypass gástrico, manga gástrica y cuidados postoperatorios por un equipo experto.">
-    <meta name="keywords" content="cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Murcia, tratamiento obesidad, equipo obesidad">
+    <meta name="keywords" content="cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad, equipo obesidad">
     <meta name="author" content="[Nombre de tu Clínica o Doctor Principal]"> <meta property="og:title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
     <meta property="og:description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
     <meta property="og:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <meta property="og:url" content="https://www.tusitioweb.com/"> <meta property="og:type" content="website">
@@ -278,7 +278,7 @@
             <div class="hero-overlay"></div> 
             <div class="hero-content container mx-auto px-4 sm:px-6 text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
-                <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida.</p>
+                <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.</p>
                 </div>
         </section>
 
@@ -517,11 +517,16 @@
         <div class="container mx-auto px-4 sm:px-6">
             <p class="mb-2">&copy; <span id="currentYear"></span> [Nombre de tu Clínica o Doctor Principal]. Todos los derechos reservados.</p>
             <p class="text-sm mb-1 text-blue-200">Unidad de Cirugía Bariátrica y Metabólica</p>
-            <p class="text-xs text-blue-200">Murcia, España.</p>
+            <p class="text-xs text-blue-200">Hospital Clínico Universitario Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, España.</p>
         </div>
     </footer>
 
     <script>
+        // Scroll al inicio de la página al cargar
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+
         // Script para el menú móvil
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -555,9 +560,7 @@
         if (contactForm) {
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault();
-                // Aquí podrías añadir una animación de "enviando..." o un mensaje en la UI
                 setTimeout(() => {
-                    // Reemplaza alert() con una notificación más elegante en un proyecto real
                     alert('Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.');
                     contactForm.reset(); 
                 }, 1000);
