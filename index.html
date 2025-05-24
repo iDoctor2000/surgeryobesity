@@ -151,7 +151,7 @@
         th { background-color: #f9fafb; /* gray-50 */ font-weight: 600; /* semibold */ color: #111827; /* gray-900 */ }
         tbody tr:nth-child(even) { background-color: #f9fafb; /* Sutil striping para filas pares */ }
 
-        /* Botones */
+        /* Botones (Se mantiene la clase por si se usa en otro lado, pero se elimina de la sección Hero) */
         .btn-primary {
             background-color: #059669; /* emerald-600 */ color: white; font-weight: 600; /* semibold */
             padding: 0.75rem 2rem; /* py-3 px-8 */ border-radius: 0.375rem; /* rounded-md */
@@ -213,13 +213,6 @@
                 grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas y medianas */
             }
         }
-        /* Podrías añadir un breakpoint para 3 columnas si tienes más miembros:
-        @media (min-width: 1024px) { /* lg: */
-        /* .team-grid {
-        /* grid-template-columns: repeat(3, 1fr); 
-        /* }
-        /* }
-        */
         .team-member-card {
             background-color: #f9fafb; /* bg-slate-100 o un color claro */
             border-radius: 0.5rem; /* rounded-lg */
@@ -228,15 +221,17 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .team-member-card img {
-            width: 150px; /* Tamaño fijo para la foto del miembro */
-            height: 150px;
-            border-radius: 50%; /* Círculo */
-            object-fit: cover; /* Asegura que la imagen cubra el círculo sin distorsionarse */
+            width: 100%; /* Ocupa el ancho de la tarjeta */
+            max-width: 200px; /* Limita el ancho máximo de la foto */
+            height: auto; /* Mantiene la proporción */
+            aspect-ratio: 3 / 4; /* Proporción para rectángulo vertical, ajusta según necesidad */
+            object-fit: cover; /* Cubre el área designada, puede recortar si la proporción no coincide exacto */
+            /* object-position: top center; */ /* Para priorizar la parte superior de la imagen si se recorta */
+            border-radius: 0.375rem; /* rounded-md, para esquinas suavizadas en el rectángulo */
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 1rem; /* Espacio debajo de la foto */
-            border: 3px solid #FFFFFF; /* Borde blanco alrededor de la foto */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 2px solid #e5e7eb; /* Borde gris claro */
         }
         .team-member-card .member-name {
             font-weight: 600; /* semibold */
@@ -287,8 +282,7 @@
             <div class="hero-content container mx-auto px-4 sm:px-6 text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
                 <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.</p>
-                <a href="#contacto" class="btn-primary text-lg sm:text-xl">Solicita más Información</a>
-            </div>
+                </div>
         </section>
 
         <section id="que-es-obesidad" class="py-12 md:py-16">
@@ -349,7 +343,7 @@
                     <div class="media-content">
                         <div class="video-wrapper">
                             <video controls playsinline preload="metadata">
-                                <source src="recursos/Video_Laparoscopica.mp4" type="video/mp4">
+                                <source src="recursos/laparoscopia.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
@@ -393,7 +387,7 @@
                     <div class="media-content">
                          <div class="video-wrapper">
                            <video controls playsinline preload="metadata">
-                                <source src="recursos/Medico_y_Paciente.mp4" type="video/mp4">
+                                <source src="recursos/medicoypaciente.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
