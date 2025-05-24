@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cirugía Bariátrica y Metabólica - Tu sitio de referencia para la Cirugia de la Obesidad</title>
-    <meta name="description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo el bypass gástrico por laparoscopia y cuidados postoperatorios.">
-    <meta name="keywords" content="cirugía bariátrica, bypass gástrico, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad">
-    <meta name="author" content="Tu sitio de referencia para la Cirugia de la Obesidad">
+    
+    <title>Cirugía Bariátrica y Metabólica - Especialistas en Obesidad</title> <meta name="description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo bypass gástrico, manga gástrica y cuidados postoperatorios por un equipo experto.">
+    <meta name="keywords" content="cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad, equipo obesidad">
+    <meta name="author" content="Nombre de tu Clínica o Doctor Principal"> <meta property="og:title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
+    <meta property="og:description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
+    <meta property="og:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <meta property="og:url" content="https://www.tusitioweb.com/"> <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
+    <meta name="twitter:description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
+    <meta name="twitter:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <link rel="icon" href="recursos/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="recursos/img/favicon.ico" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,23 +28,22 @@
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            color: #374151; /* text-slate-700 */
-            background-color: #f8fafc; /* bg-slate-50 como fondo base general si body::before no carga o es muy sutil */
+            color: #374151; 
+            background-color: #f8fafc; 
         }
 
-        body::before {
+        body::before { /* Fondo global muy sutil */
             content: "";
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(to bottom, rgba(255,255,255,0.92), rgba(255,255,255,0.85)), url('recursos/CocoQx2.jpg');
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.97), rgba(255,255,255,0.95)), url('recursos/CocoQx2.jpg');
             background-size: cover; 
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.4; 
-            /* filter: grayscale(50%); */
+            opacity: 0.3; /* Aún más sutil para el fondo global */
             z-index: -1;
         }
 
@@ -55,30 +62,41 @@
         
         .section-container {
              background-color: #ffffff; 
-             border-radius: 0.5rem; /* rounded-lg */
-             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); /* shadow-md */
-             padding: 1.5rem; /* p-6 */
+             border-radius: 0.5rem; 
+             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); 
+             padding: 1.5rem; 
         }
-        @media (min-width: 768px) { /* md: */
+        @media (min-width: 768px) {
             .section-container {
-                padding: 2.5rem; /* p-10 */
+                padding: 2.5rem; 
             }
         }
         
-        .hero-bg {
-            background-color: #1e3a8a; /* Azul oscuro (blue-900) */
-            background-image: url('recursos/img/hero-background.jpg'); 
+        .hero-bg { /* Fondo específico para la sección principal (Hero) */
+            background-image: url('recursos/CocoQx2.jpg'); /* Tu imagen principal para el hero */
+            background-color: #1e3a8a; /* Fallback por si no carga la imagen */
             background-size: cover;
             background-position: center;
+            position: relative; /* Necesario para el overlay */
+        }
+        .hero-overlay { /* Superposición para el Hero, para legibilidad del texto */
+            position: absolute;
+            inset: 0;
+            background-color: rgba(20, 30, 50, 0.65); /* Azul oscuro semitransparente, ajusta opacidad */
+            z-index: 0;
+        }
+        .hero-content { /* Contenido del Hero, debe estar sobre el overlay */
+            position: relative;
+            z-index: 1;
         }
         
         details > summary {
             cursor: pointer;
-            font-weight: 600; /* semibold */
-            padding: 0.75rem 1.25rem; /* py-3 px-5 */
-            background-color: #f0f9ff; /* sky-50 */
-            color: #0c4a6e; /* sky-800 */
-            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600; 
+            padding: 0.75rem 1.25rem; 
+            background-color: #f0f9ff; 
+            color: #0c4a6e; 
+            border-radius: 0.375rem; 
             margin-bottom: 0.5rem;
             transition: background-color 0.3s;
             display: flex;
@@ -94,80 +112,73 @@
         details[open] > summary::after {
              transform: rotate(180deg);
         }
-
-        details > summary:hover {
-            background-color: #e0f2fe; /* sky-100 */
-        }
-        details[open] > summary {
-            background-color: #bae6fd; /* sky-200 */
-        }
+        details > summary:hover { background-color: #e0f2fe; }
+        details[open] > summary { background-color: #bae6fd; }
         details > div {
-            padding: 1.25rem; /* p-5 */
-            border: 1px solid #e0f2fe; /* sky-100 */
+            padding: 1.25rem; 
+            border: 1px solid #e0f2fe; 
             border-top: none;
-            border-radius: 0 0 0.375rem 0.375rem; /* rounded-b-md */
-            background-color: #f8fafc; /* slate-50 */
+            border-radius: 0 0 0.375rem 0.375rem; 
+            background-color: #f8fafc; 
         }
 
         h1, h2, h3, h4 { font-weight: 700; } 
         h1 { color: #FFFFFF; }
-        h2 { color: #1e3a8a; /* text-blue-900 */ margin-bottom: 1.5rem; /* mb-6 */ font-size: 1.875rem; line-height: 2.25rem; /* text-3xl */ }
-        @media (min-width: 768px) { h2 { font-size: 2.25rem; line-height: 2.5rem; /* md:text-4xl */ } }
-        h3 { color: #1d4ed8; /* text-blue-700 */ margin-bottom: 1rem; /* mb-4 */ margin-top: 1.5rem; /* mt-6 */ font-size: 1.5rem; line-height: 2rem; /* text-2xl */ }
-        h4 { color: #2563eb; /* text-blue-600 */ margin-bottom: 0.75rem; /* mb-3 */ margin-top: 1rem; /* mt-4 */ font-size: 1.25rem; line-height: 1.75rem; /* text-xl */ }
+        h2 { color: #1e3a8a; margin-bottom: 1.5rem; font-size: 1.875rem; line-height: 2.25rem; }
+        @media (min-width: 768px) { h2 { font-size: 2.25rem; line-height: 2.5rem; } }
+        h3 { color: #1d4ed8; margin-bottom: 1rem; margin-top: 1.5rem; font-size: 1.5rem; line-height: 2rem; }
+        h4 { color: #2563eb; margin-bottom: 0.75rem; margin-top: 1rem; font-size: 1.25rem; line-height: 1.75rem; }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem; 
-            margin-bottom: 1rem; 
+            width: 100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 1rem; 
             background-color: #FFFFFF;
-            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1); /* shadow-sm */
-            border-radius: 0.375rem; /* rounded-md */
-            overflow: hidden; 
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1); 
+            border-radius: 0.375rem; overflow: hidden; 
         }
         th, td {
-            border: 1px solid #e5e7eb; /* gray-200 */
-            padding: 0.75rem 1rem; /* py-3 px-4 */
-            text-align: left;
-            color: #1f2937; /* gray-800 */
+            border: 1px solid #e5e7eb; padding: 0.75rem 1rem; text-align: left; color: #1f2937; 
         }
-        th {
-            background-color: #f9fafb; /* gray-50 */
-            font-weight: 600; /* semibold */
-            color: #111827; /* gray-900 */
-        }
-        tbody tr:nth-child(even) {
-            background-color: #f9fafb; 
-        }
+        th { background-color: #f9fafb; font-weight: 600; color: #111827; }
+        tbody tr:nth-child(even) { background-color: #f9fafb; }
 
         .btn-primary {
-            background-color: #059669; /* emerald-600 */
-            color: white;
-            font-weight: 600; /* semibold */
-            padding: 0.75rem 2rem; /* py-3 px-8 */
-            border-radius: 0.375rem; /* rounded-md */
-            transition: background-color 0.3s ease;
-            display: inline-block; 
-            text-align: center;
+            background-color: #059669; color: white; font-weight: 600; 
+            padding: 0.75rem 2rem; border-radius: 0.375rem; 
+            transition: background-color 0.3s ease; display: inline-block; text-align: center;
         }
-        .btn-primary:hover {
-            background-color: #047857; /* emerald-700 */
+        .btn-primary:hover { background-color: #047857; }
+
+        .media-text-layout { /* Para imagen/video al lado del texto */
+            display: flex;
+            flex-direction: column; /* Apilado por defecto (móvil) */
+            gap: 1.5rem; /* Espacio entre texto y media */
         }
-        .video-container { /* Contenedor para los videos */
-            margin-top: 1.5rem; /* my-6 */
-            margin-bottom: 1.5rem; /* my-6 */
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 42rem; /* max-w-xl, ajusta según necesites */
+        @media (min-width: 768px) { /* md: */
+            .media-text-layout {
+                flex-direction: row; /* Lado a lado en pantallas medianas+ */
+                align-items: flex-start; /* Alinea items al inicio */
+            }
+            .media-text-layout > .text-content {
+                flex: 2; /* El texto ocupa más espacio */
+            }
+            .media-text-layout > .media-content {
+                flex: 1; /* El medio ocupa menos */
+            }
+        }
+        .media-content img, .media-content video {
             border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); /* shadow-lg */
-            overflow: hidden; /* Para que el borde redondeado afecte al video */
-        }
-        .video-container video {
-            display: block; /* Para eliminar espacio extra debajo del video */
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); /* shadow-md */
             width: 100%;
             height: auto;
+            display: block;
+        }
+        .video-wrapper { /* Contenedor específico para videos para mantener aspect ratio si es necesario o solo para styling */
+            border-radius: 0.5rem; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); 
+            overflow: hidden;
+        }
+        .video-wrapper video {
+             display: block; width: 100%; height: auto;
         }
 
     </style>
@@ -175,12 +186,15 @@
 <body class="bg-slate-50">
 
     <header class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <a href="#inicio" class="text-xl sm:text-2xl font-bold text-blue-700 hover:text-blue-800">Tu sitio de referencia para la Cirugia de la Obesidad</a>
-            <nav class="hidden md:flex space-x-3 lg:space-x-4">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#inicio" class="block">
+                <img src="recursos/img/Logo1.png" alt="Logo Clínica Obesidad" class="h-10 sm:h-12 md:h-14 w-auto">
+            </a>
+            <nav class="hidden md:flex space-x-2 lg:space-x-3">
                 <a href="#inicio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
                 <a href="#que-es-obesidad" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Qué es la Obesidad</a>
                 <a href="#cirugia" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">La Cirugía</a>
+                <a href="#equipo-humano" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Equipo Humano</a>
                 <a href="#postoperatorio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Postoperatorio</a>
                 <a href="#dieta" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Dieta</a>
                 <a href="#audio-info" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Audio Pacientes</a>
@@ -196,6 +210,7 @@
             <a href="#inicio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Inicio</a>
             <a href="#que-es-obesidad" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Qué es la Obesidad</a>
             <a href="#cirugia" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">La Cirugía</a>
+            <a href="#equipo-humano" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Equipo Humano</a>
             <a href="#postoperatorio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Postoperatorio</a>
             <a href="#dieta" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Dieta y Fases</a>
             <a href="#audio-info" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Audio Pacientes</a>
@@ -204,9 +219,9 @@
     </header>
 
     <main>
-        <section id="inicio" class="hero-bg text-white min-h-screen flex items-center justify-center relative py-16 md:py-24">
-            <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
-            <div class="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <section id="inicio" class="hero-bg text-white min-h-screen flex items-center justify-center py-16 md:py-24">
+            <div class="hero-overlay"></div> 
+            <div class="hero-content container mx-auto px-4 sm:px-6 text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
                 <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.</p>
                 <a href="#contacto" class="btn-primary text-lg sm:text-xl">Solicita más Información</a>
@@ -216,35 +231,34 @@
         <section id="que-es-obesidad" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">¿Qué es la Obesidad?</h2>
-                <p class="mb-4 text-gray-700">La obesidad hoy en día es considerada la epidemia del siglo XXI. Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas.</p>
-                
-                <div class="video-container">
-                    <video autoplay loop muted playsinline poster="recursos/img/poster_cartoon_obesidad.jpg"> {/* Considera crear un poster */}
-                        <source src="recursos/ideo_cartoonobesidad.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
+                <div class="media-text-layout">
+                    <div class="text-content">
+                        <p class="mb-4 text-gray-700">La obesidad hoy en día es considerada la epidemia del siglo XXI. Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas.</p>
+                        <p class="text-gray-700">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \times 1.60) = 50$.</p>
+                    </div>
+                    <div class="media-content">
+                        <div class="video-wrapper">
+                            <video autoplay loop muted playsinline>
+                                <source src="recursos/ideo_cartoonobesidad.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                    </div>
                 </div>
-                
-                <p class="mt-6 mb-4 text-gray-700">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \times 1.60) = 50$.</p>
                 
                 <h3 class="mt-8">Grados de Obesidad (IMC)</h3>
                 <div class="overflow-x-auto shadow-md rounded-lg">
                     <table>
-                        <thead>
-                            <tr><th>Grado</th><th>IMC</th></tr>
-                        </thead>
+                        <thead><tr><th>Grado</th><th>IMC</th></tr></thead>
                         <tbody>
-                            <tr><td>Leve</td><td>27-30</td></tr>
-                            <tr><td>Moderada</td><td>30-35</td></tr>
-                            <tr><td>Severa</td><td>35-40</td></tr>
-                            <tr><td>MÓRBIDA</td><td>40-50</td></tr>
-                            <tr><td>Superobesidad</td><td>50-60</td></tr>
-                            <tr><td>Supersuperobesidad</td><td>60-65</td></tr>
+                            <tr><td>Leve</td><td>27-30</td></tr><tr><td>Moderada</td><td>30-35</td></tr>
+                            <tr><td>Severa</td><td>35-40</td></tr><tr><td>MÓRBIDA</td><td>40-50</td></tr>
+                            <tr><td>Superobesidad</td><td>50-60</td></tr><tr><td>Supersuperobesidad</td><td>60-65</td></tr>
                             <tr><td>Obesidad triple</td><td>&gt;65</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="mt-6 mb-4 text-gray-700">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida [...]</p>
+                <p class="mt-6 mb-4 text-gray-700">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida, como Hipertensión Arterial, Diabetes Mellitus, Trastornos del sueño, Apnea, Asma, Artrosis, Dolor de espalda, Reflujo Gastroesofágico, y Alteraciones menstruales. Por todas estas razones es necesaria la pérdida de peso, y para la mayoría de los pacientes con obesidad patológica la cirugía es la única solución.</p>
 
                 <h3 class="mt-8">¿Cuándo se debe intervenir a un paciente con obesidad?</h3>
                 <ul class="list-disc list-inside space-y-2 mb-6 text-gray-700 pl-4">
@@ -254,25 +268,25 @@
                     <li>Seguridad en la cooperación del paciente a largo plazo.</li>
                     <li>Consentimiento informado y asunción del riesgo quirúrgico.</li>
                 </ul>
-                </div>
+            </div>
         </section>
 
         <section id="cirugia" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">La Cirugía: Bypass Gástrico por Laparoscopia</h2>
-                <p class="mb-4 text-gray-700">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital [...]</p>
-                <p class="mb-4 text-gray-700">Al paciente se le explica en qué consiste la técnica quirúrgica [...]</p>
-                <p class="mb-4 text-gray-700">La cirugía se realiza bajo anestesia general y mediante laparoscopia [...]</p>
+                <p class="mb-4 text-gray-700">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital (endocrinólogos, psicólogos, cirujanos, etc.) que decidirán si el paciente es candidato. Se realizan valoraciones nutricional, psiquiátrica, preanestésica y quirúrgica.</p>
+                <p class="mb-4 text-gray-700">Al paciente se le explica en qué consiste la técnica quirúrgica, las posibles complicaciones y los resultados, firmando el correspondiente consentimiento informado. El objetivo del tratamiento quirúrgico es hacerle perder peso y que esta pérdida se mantenga a largo plazo.</p>
                 
                 <h3 class="mt-8">Bypass gástrico en Y de Roux por Laparoscopia</h3>
-                <div class="md:flex md:space-x-8 items-center mt-6">
-                    <div class="md:w-1/2 text-gray-700">
-                        <p class="mb-3">Consiste en cortar, grapar y seccionar la parte más alta del estómago [...]</p>
-                        <p class="mb-3">Con esto se come menos, se llega a la sensación de saciedad antes [...]</p>
+                <div class="media-text-layout mt-6">
+                    <div class="text-content">
+                        <p class="mb-3 text-gray-700">La cirugía se realiza bajo anestesia general y mediante laparoscopia, siendo menos agresiva. Se realiza a través de 5-6 orificios por donde se introducirá el material quirúrgico y de visión.</p>
+                        <p class="mb-3 text-gray-700">Consiste en cortar, grapar y seccionar la parte más alta del estómago dejando un estómago pequeño (reservorio gástrico) de aproximadamente 20-30ml. Seguidamente se divide el intestino y se une con el reservorio, de modo que los alimentos pasan directamente a tramos más lejanos del intestino delgado, ahorrándose la absorción de los alimentos en 1.5 a 2 metros.</p>
+                        <p class="text-gray-700">Con esto se come menos, se llega a la sensación de saciedad antes y, al pasar los alimentos a tramos más lejanos del intestino, se reduce la absorción de los alimentos, lo que conlleva pérdida de peso.</p>
                     </div>
-                    <div class="md:w-1/2 mt-6 md:mt-0">
-                         <div class="video-container">
-                            <video controls playsinline preload="metadata" poster="recursos/img/poster_laparoscopica.jpg"> {/* Considera crear un poster */}
+                    <div class="media-content">
+                        <div class="video-wrapper">
+                            <video controls playsinline preload="metadata">
                                 <source src="recursos/Video_Laparoscopica.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
@@ -281,77 +295,80 @@
                 </div>
 
                 <h3 class="mt-10">Preparación Preoperatoria</h3>
-                <p class="mb-4 text-gray-700">El paciente ingresa un día antes de la cirugía. [...]</p>
+                <p class="mb-4 text-gray-700">El paciente ingresa un día antes de la cirugía. Como tratamiento previo se administra terapia para evitar vómitos, antibióticos y terapia antitrombótica. El paciente debe ducharse antes de la cirugía, insistiendo en el abdomen. Si tiene vello en el abdomen, se rasurará con maquinilla eléctrica.</p>
             </div>
         </section>
-
-        <section id="postoperatorio" class="py-12 md:py-16">
+        
+        <section id="equipo-humano" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">Manejo y Seguimiento Postoperatorio</h2>
-                <h3 class="mt-8">Inmediato Postoperatorio</h3>
-                <p class="mb-2 text-gray-700">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. [...]</p>
-                <p class="mb-4 text-gray-700">Al inicio de la alimentación líquida (24-48h después), notará plenitud. [...]</p>
-                
-                <h3 class="mt-8">Primeros Días en Casa</h3>
-                <p class="mb-2 text-gray-700">Puede presentar dolor abdominal difuso, no muy intenso [...]</p>
-                <p class="font-semibold text-red-600 mb-4 bg-red-50 p-3 rounded-md"><i class="fas fa-exclamation-triangle mr-2"></i>Importante: No tomará ningún alimento sólido ni bebida con gas. [...]</p>
-                
-                <h3 class="mt-8">Seguimiento a Largo Plazo</h3>
-                <p class="mb-4 text-gray-700">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. [...]</p>
-                
-                <div class="video-container">
-                     <video controls playsinline preload="metadata" poster="recursos/img/poster_medico_paciente.jpg"> {/* Considera crear un poster */}
-                        <source src="recursos/Medico_y_Paciente.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
+                <h2 class="text-center">Nuestro Equipo Humano</h2>
+                <div class="media-text-layout mt-6">
+                    <div class="text-content">
+                        <p class="text-gray-700 mb-4">Equipo humano altamente capacitado y especializado en cirugía de obesidad. Este equipo está integrado por profesionales sanitarios de máximo prestigio y experiencia, dedicados a ofrecer tratamientos avanzados y personalizados para pacientes con obesidad mórbida.</p>
+                        <p class="text-gray-700 mb-4">La unidad de obesidad del hospital se enfoca en proporcionar un enfoque integral y multidisciplinario, que incluye no solo la cirugía, sino también el seguimiento postoperatorio y el apoyo nutricional y psicológico necesario para asegurar el éxito a largo plazo del tratamiento.</p>
+                        <p class="text-gray-700">El hospital se compromete a utilizar la tecnología más avanzada y a brindar un trato excelente a cada paciente, manteniendo siempre como prioridad su bienestar y satisfacción.</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="recursos/equipohumanococo.png" alt="Equipo humano de la clínica">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="dieta" class="bg-slate-100 py-12 md:py-16">
+        <section id="postoperatorio" class="bg-slate-100 py-12 md:py-16">
+            <div class="container mx-auto px-4 sm:px-6 section-container">
+                <h2 class="text-center">Manejo y Seguimiento Postoperatorio</h2>
+                
+                <div class="media-text-layout mt-8">
+                    <div class="text-content">
+                        <h3 class="mt-0">Inmediato Postoperatorio</h3>
+                        <p class="mb-2 text-gray-700">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. Saldrá sin sonda nasal ni vesical, con medias de compresión y algunos con drenaje abdominal. Podrá levantarse cuando esté en la habitación, con precaución la primera vez. Es frecuente dolor en el hombro izquierdo y malestar abdominal. Si hay buena tolerancia, el alta es al 1º-2º día postoperatorio.</p>
+                        <p class="mb-4 text-gray-700">Al inicio de la alimentación líquida (24-48h después), notará plenitud. Beba con pajita o cucharadas lentamente. Se darán recomendaciones y tratamientos al alta: dieta bariátrica por fases, heparina subcutánea (25-30 días), omeprazol, complejo vitamínico y módulo proteico.</p>
+                    </div>
+                    <div class="media-content">
+                         <div class="video-wrapper">
+                           <video controls playsinline preload="metadata">
+                                <source src="recursos/Medico_y_Paciente.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-8">Primeros Días en Casa</h3>
+                <p class="mb-2 text-gray-700">Puede presentar dolor abdominal difuso, no muy intenso, manejable con paracetamol diluido. Mejorará el dolor torácico al respirar con fisioterapia respiratoria (inflar globos). No debería vomitar ni doler el estómago; si ocurre, suele ser por comer rápido o en exceso.</p>
+                <p class="font-semibold text-red-600 mb-4 bg-red-50 p-3 rounded-md"><i class="fas fa-exclamation-triangle mr-2"></i>Importante: No tomará ningún alimento sólido ni bebida con gas. Existe peligro de complicación (dehiscencia de suturas, fístulas) si toma alimentos sólidos.</p>
+                
+                <h3 class="mt-8">Seguimiento a Largo Plazo</h3>
+                <p class="mb-4 text-gray-700">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. Es FUNDAMENTAL estar motivado, bien informado y aceptar el compromiso de seguir las indicaciones de por vida. Las revisiones en cirugía son a la semana, 15 días, al mes, a los 3, 6, 12, 18, 24 meses y luego anual hasta 5 años mínimo. Se realizan ecografías y tránsito gastrointestinal (TEGD) para valoración.</p>
+            </div>
+        </section>
+
+        <section id="dieta" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">Dieta Postoperatoria por Fases</h2>
                 <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto">La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.</p>
+
                 <div class="space-y-4">
                     <details class="mb-3">
                         <summary>FASE 1: Protección de la Cirugía (Primeros 7 días)</summary>
                         <div class="space-y-2 text-gray-700">
                              <p><strong>Duración:</strong> 7 primeros días.</p>
-                             <p>[...]</p>
+                             <p><strong>Objetivos:</strong> Garantizar consolidación de suturas (dieta líquida), protección y prevención de dilatación del reservorio gástrico (limitación de volumen).</p>
+                             <p>[...] (Contenido restante de la fase 1)</p>
                         </div>
                     </details>
-                     <details class="mb-3">
-                        <summary>FASE 2: Protección Quirúrgica (Siguientes 15 días)</summary>
-                        <div class="space-y-2 text-gray-700">
-                            <p>[...]</p>
-                        </div>
-                    </details>
-                    <details class="mb-3">
-                        <summary>FASE 3: Protección Quirúrgica (Siguientes 15 días)</summary>
-                        <div class="space-y-2 text-gray-700">
-                           <p>[...]</p>
-                        </div>
-                    </details>
-                    <details class="mb-3">
-                        <summary>FASE 4: Protección Quirúrgica (15 a 30 días)</summary>
-                        <div class="space-y-2 text-gray-700">
-                            <p>[...]</p>
-                        </div>
-                    </details>
-                    <details class="mb-3">
-                        <summary>FASE 5: Tolerancia (Dieta Normalizada y Saludable)</summary>
-                        <div class="space-y-2 text-gray-700">
-                            <p>[...]</p>
-                        </div>
-                    </details>
+                     <details class="mb-3"> <summary>FASE 2: Protección Quirúrgica (Siguientes 15 días)</summary> <div class="space-y-2 text-gray-700"> <p>[...]</p> </div> </details>
+                    <details class="mb-3"> <summary>FASE 3: Protección Quirúrgica (Siguientes 15 días)</summary> <div class="space-y-2 text-gray-700"> <p>[...]</p> </div> </details>
+                    <details class="mb-3"> <summary>FASE 4: Protección Quirúrgica (15 a 30 días)</summary> <div class="space-y-2 text-gray-700"> <p>[...]</p> </div> </details>
+                    <details class="mb-3"> <summary>FASE 5: Tolerancia (Dieta Normalizada y Saludable)</summary> <div class="space-y-2 text-gray-700"> <p>[...]</p> </div> </details>
                 </div>
-                <div class="text-center mt-10">
-                    <img src="recursos/img/alimentacion-saludable.jpg" alt="Alimentación saludable" class="mx-auto rounded-lg shadow-lg max-w-lg w-full">
+                <div class="text-center mt-10 media-content mx-auto max-w-lg"> <img src="recursos/img/alimentossaludables.png" alt="Alimentación saludable postoperatoria">
                 </div>
             </div>
         </section>
         
-        <section id="audio-info" class="py-12 md:py-16">
+        <section id="audio-info" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container text-center">
                 <h2 class="mb-6">Información Adicional para Pacientes</h2>
                 <p class="mb-6 text-gray-700">Escucha esta guía con información importante sobre tu proceso:</p>
@@ -363,13 +380,13 @@
             </div>
         </section>
 
-        <section id="contacto" class="bg-slate-100 py-16 md:py-24">
+        <section id="contacto" class="py-16 md:py-24">
              <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl lg:text-4xl font-bold text-blue-900">Contáctanos y Da el Primer Paso</h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.</p>
                 </div>
-                <div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-gray-200">
+                <div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-gray-200 section-container">
                     <form id="contactForm" class="space-y-6">
                         <div>
                             <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo <span class="text-red-500">*</span></label>
@@ -411,7 +428,7 @@
 
     <footer class="bg-blue-800 text-blue-50 py-10 text-center">
         <div class="container mx-auto px-4 sm:px-6">
-            <p class="mb-2">&copy; <span id="currentYear"></span> Tu sitio de referencia para la Cirugia de la Obesidad. Todos los derechos reservados.</p>
+            <p class="mb-2">&copy; <span id="currentYear"></span> [Nombre de tu Clínica o Doctor]. Todos los derechos reservados.</p>
             <p class="text-sm mb-1 text-blue-200">Unidad de Cirugía Bariátrica y Metabólica</p>
             <p class="text-xs text-blue-200">Hospital Clínico Universitario Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, España.</p>
         </div>
@@ -426,11 +443,9 @@
                 mobileMenu.classList.toggle('mobile-menu-hidden');
                 const icon = mobileMenuButton.querySelector('i');
                 if (mobileMenu.classList.contains('mobile-menu-hidden')) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
                 } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
+                    icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
                 }
             });
             mobileMenu.querySelectorAll('a').forEach(link => {
@@ -443,9 +458,7 @@
         }
 
         const currentYearSpan = document.getElementById('currentYear');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
+        if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
 
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
