@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Cirugía Bariátrica y Metabólica - Especialistas en Obesidad</title>
-    <meta name="description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo bypass gástrico, manga gástrica y cuidados postoperatorios por un equipo experto.">
-    <meta name="keywords" content="cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad, equipo obesidad">
-    <meta name="author" content="[Nombre de tu Clínica o Doctor Principal]"> <meta property="og:title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
-    <meta property="og:description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
-    <meta property="og:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <meta property="og:url" content="https://www.tusitioweb.com/"> <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_ES">
+    <!-- Los meta tags de título y descripción también necesitarían ser dinámicos
+         o tener versiones específicas por idioma si se busca un SEO multilingüe completo,
+         lo cual es más complejo con una solución puramente JavaScript. -->
+    <title data-translate-key="meta_title">Cirugía Bariátrica y Metabólica - Especialistas en Obesidad</title>
+    <meta name="description" data-translate-key="meta_description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo bypass gástrico, manga gástrica y cuidados postoperatorios por un equipo experto.">
+    <meta name="keywords" data-translate-key="meta_keywords" content="cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad, equipo obesidad">
+    <meta name="author" content="[Nombre de tu Clínica o Doctor Principal]">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
-    <meta name="twitter:description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
-    <meta name="twitter:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <link rel="icon" href="recursos/img/favicon.ico" type="image/x-icon">
+    <meta property="og:title" data-translate-key="og_title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
+    <meta property="og:description" data-translate-key="og_description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
+    <meta property="og:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png">
+    <meta property="og:url" content="https://www.tusitioweb.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-translate-key="twitter_title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
+    <meta name="twitter:description" data-translate-key="twitter_description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
+    <meta name="twitter:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png">
+
+    <link rel="icon" href="recursos/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="recursos/img/favicon.ico" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -246,6 +252,24 @@
             margin-right: auto;
             margin-bottom: 2rem; /* Espacio antes del reproductor de audio */
         }
+        /* Estilos para el selector de idioma */
+        #language-selector-container {
+            margin-left: 1rem; /* Espacio a la izquierda del selector */
+        }
+        #language-selector {
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem; /* rounded-md */
+            border: 1px solid #D1D5DB; /* border-gray-300 */
+            background-color: #FFFFFF; /* bg-white */
+            color: #374151; /* text-gray-700 */
+            font-size: 0.875rem; /* text-sm */
+            cursor: pointer;
+        }
+        #language-selector:focus {
+            outline: none;
+            border-color: #3B82F6; /* focus:border-blue-500 */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3); /* focus:ring-blue-500 focus:ring-opacity-50 */
+        }
 
 
     </style>
@@ -257,31 +281,45 @@
             <a href="#inicio" class="block">
                 <img src="recursos/img/Logo1.png" alt="Logo Clínica Obesidad" class="h-10 sm:h-12 md:h-14 w-auto">
             </a>
-            <nav class="hidden md:flex space-x-1 lg:space-x-2">
-                <a href="#inicio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                <a href="#que-es-obesidad" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Qué es la Obesidad</a>
-                <a href="#cirugia" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">La Cirugía</a>
-                <a href="#postoperatorio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Postoperatorio</a>
-                <a href="#dieta" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Dieta</a>
-                <a href="#info-pacientes" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Info Pacientes</a>
-                <a href="#equipo-humano" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Equipo Humano</a>
-                <a href="#contacto" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
-            </nav>
-            <div class="md:hidden">
+            <div class="flex items-center"> <nav class="hidden md:flex space-x-1 lg:space-x-2">
+                    <a href="#inicio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_inicio">Inicio</a>
+                    <a href="#que-es-obesidad" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_que_es_obesidad">Qué es la Obesidad</a>
+                    <a href="#cirugia" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_cirugia">La Cirugía</a>
+                    <a href="#postoperatorio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_postoperatorio">Postoperatorio</a>
+                    <a href="#dieta" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_dieta">Dieta</a>
+                    <a href="#info-pacientes" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_info_pacientes">Info Pacientes</a>
+                    <a href="#equipo-humano" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_equipo_humano">Equipo Humano</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_contacto">Contacto</a>
+                </nav>
+                <div id="language-selector-container" class="hidden md:block">
+                    <select id="language-selector" aria-label="Seleccionar idioma">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+            <div class="md:hidden flex items-center"> <div id="language-selector-container-mobile" class="mr-2">
+                     <select id="language-selector-mobile" class="text-xs p-1 rounded border border-gray-300 bg-white text-gray-700" aria-label="Seleccionar idioma móvil">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                    </select>
+                 </div>
                 <button id="mobileMenuButton" class="text-gray-700 hover:text-emerald-600 focus:outline-none p-2">
                     <i class="fas fa-bars fa-lg"></i>
                 </button>
             </div>
         </div>
         <div id="mobileMenu" class="mobile-menu-hidden md:hidden bg-white shadow-lg absolute w-full z-30 border-t border-gray-200">
-            <a href="#inicio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Inicio</a>
-            <a href="#que-es-obesidad" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Qué es la Obesidad</a>
-            <a href="#cirugia" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">La Cirugía</a>
-            <a href="#postoperatorio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Postoperatorio</a>
-            <a href="#dieta" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Dieta y Fases</a>
-            <a href="#info-pacientes" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Info Pacientes</a>
-            <a href="#equipo-humano" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Equipo Humano</a>
-            <a href="#contacto" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Contacto</a>
+            <a href="#inicio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_inicio_mobile">Inicio</a>
+            <a href="#que-es-obesidad" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_que_es_obesidad_mobile">Qué es la Obesidad</a>
+            <a href="#cirugia" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_cirugia_mobile">La Cirugía</a>
+            <a href="#postoperatorio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_postoperatorio_mobile">Postoperatorio</a>
+            <a href="#dieta" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_dieta_mobile">Dieta y Fases</a>
+            <a href="#info-pacientes" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_info_pacientes_mobile">Info Pacientes</a>
+            <a href="#equipo-humano" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_equipo_humano_mobile">Equipo Humano</a>
+            <a href="#contacto" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium" data-translate-key="nav_contacto_mobile">Contacto</a>
         </div>
     </header>
 
@@ -289,18 +327,18 @@
         <section id="inicio" class="hero-bg text-white min-h-screen flex items-center justify-center py-16 md:py-24">
             <div class="hero-overlay"></div> 
             <div class="hero-content container mx-auto px-4 sm:px-6 text-center">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
-                <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.</p>
-                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight" data-translate-key="hero_title">Tratamiento Quirúrgico de la Obesidad Patológica</h1>
+                <p class="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto" data-translate-key="hero_subtitle">Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.</p>
+            </div>
         </section>
 
         <section id="que-es-obesidad" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">¿Qué es la Obesidad?</h2>
+                <h2 class="text-center" data-translate-key="que_es_obesidad_title">¿Qué es la Obesidad?</h2>
                 <div class="media-text-layout mt-8">
                     <div class="text-content">
-                        <p class="mb-4 text-gray-700">La obesidad hoy en día es considerada la epidemia del siglo XXI. Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas.</p>
-                        <p class="text-gray-700">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \times 1.60) = 50$.</p>
+                        <p class="mb-4 text-gray-700" data-translate-key="que_es_obesidad_p1">La obesidad hoy en día es considerada la epidemia del siglo XXI. Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas.</p>
+                        <p class="text-gray-700" data-translate-key="que_es_obesidad_p2">Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \times 1.60) = 50$.</p>
                     </div>
                     <div class="media-content">
                         <div class="video-wrapper">
@@ -312,42 +350,45 @@
                     </div>
                 </div>
                 
-                <h3 class="mt-10">Grados de Obesidad (IMC)</h3>
+                <h3 class="mt-10" data-translate-key="grados_obesidad_title">Grados de Obesidad (IMC)</h3>
                 <div class="overflow-x-auto shadow-md rounded-lg mt-4">
                     <table>
-                        <thead><tr><th>Grado</th><th>IMC</th></tr></thead>
+                        <thead><tr><th data-translate-key="table_grado">Grado</th><th data-translate-key="table_imc">IMC</th></tr></thead>
                         <tbody>
-                            <tr><td>Leve</td><td>27-30</td></tr><tr><td>Moderada</td><td>30-35</td></tr>
-                            <tr><td>Severa</td><td>35-40</td></tr><tr><td>MÓRBIDA</td><td>40-50</td></tr>
-                            <tr><td>Superobesidad</td><td>50-60</td></tr><tr><td>Supersuperobesidad</td><td>60-65</td></tr>
-                            <tr><td>Obesidad triple</td><td>&gt;65</td></tr>
+                            <tr><td data-translate-key="grado_leve">Leve</td><td>27-30</td></tr>
+                            <tr><td data-translate-key="grado_moderada">Moderada</td><td>30-35</td></tr>
+                            <tr><td data-translate-key="grado_severa">Severa</td><td>35-40</td></tr>
+                            <tr><td data-translate-key="grado_morbida">MÓRBIDA</td><td>40-50</td></tr>
+                            <tr><td data-translate-key="grado_superobesidad">Superobesidad</td><td>50-60</td></tr>
+                            <tr><td data-translate-key="grado_supersuperobesidad">Supersuperobesidad</td><td>60-65</td></tr>
+                            <tr><td data-translate-key="grado_triple">Obesidad triple</td><td>&gt;65</td></tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="mt-6 mb-4 text-gray-700">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida, como Hipertensión Arterial, Diabetes Mellitus, Trastornos del sueño, Apnea, Asma, Artrosis, Dolor de espalda, Reflujo Gastroesofágico, y Alteraciones menstruales. Por todas estas razones es necesaria la pérdida de peso, y para la mayoría de los pacientes con obesidad patológica la cirugía es la única solución.</p>
+                <p class="mt-6 mb-4 text-gray-700" data-translate-key="que_es_obesidad_p3">Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida, como Hipertensión Arterial, Diabetes Mellitus, Trastornos del sueño, Apnea, Asma, Artrosis, Dolor de espalda, Reflujo Gastroesofágico, y Alteraciones menstruales. Por todas estas razones es necesaria la pérdida de peso, y para la mayoría de los pacientes con obesidad patológica la cirugía es la única solución.</p>
 
-                <h3 class="mt-10">¿Cuándo se debe intervenir a un paciente con obesidad?</h3>
+                <h3 class="mt-10" data-translate-key="cuando_intervenir_title">¿Cuándo se debe intervenir a un paciente con obesidad?</h3>
                 <ul class="list-disc list-inside space-y-2 mt-4 mb-6 text-gray-700 pl-4">
-                    <li>Pacientes con IMC de 30 asociado a comorbilidad.</li>
-                    <li>Pacientes con IMC mayor o igual a 35.</li>
-                    <li>Obesidad mantenida durante 5 años con fracaso de otros tratamientos.</li>
-                    <li>Seguridad en la cooperación del paciente a largo plazo.</li>
-                    <li>Consentimiento informado y asunción del riesgo quirúrgico.</li>
+                    <li data-translate-key="cuando_intervenir_li1">Pacientes con IMC de 30 asociado a comorbilidad.</li>
+                    <li data-translate-key="cuando_intervenir_li2">Pacientes con IMC mayor o igual a 35.</li>
+                    <li data-translate-key="cuando_intervenir_li3">Obesidad mantenida durante 5 años con fracaso de otros tratamientos.</li>
+                    <li data-translate-key="cuando_intervenir_li4">Seguridad en la cooperación del paciente a largo plazo.</li>
+                    <li data-translate-key="cuando_intervenir_li5">Consentimiento informado y asunción del riesgo quirúrgico.</li>
                 </ul>
             </div>
         </section>
 
         <section id="cirugia" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">La Cirugía: Bypass Gástrico por Laparoscopia</h2>
-                <p class="mb-4 mt-8 text-gray-700">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital (endocrinólogos, psicólogos, cirujanos, etc.) que decidirán si el paciente es candidato. Se realizan valoraciones nutricional, psiquiátrica, preanestésica y quirúrgica.</p>
-                <p class="mb-4 text-gray-700">Al paciente se le explica en qué consiste la técnica quirúrgica, las posibles complicaciones y los resultados, firmando el correspondiente consentimiento informado. El objetivo del tratamiento quirúrgico es hacerle perder peso y que esta pérdida se mantenga a largo plazo.</p>
+                <h2 class="text-center" data-translate-key="cirugia_title">La Cirugía: Bypass Gástrico por Laparoscopia</h2>
+                <p class="mb-4 mt-8 text-gray-700" data-translate-key="cirugia_p1">Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital (endocrinólogos, psicólogos, cirujanos, etc.) que decidirán si el paciente es candidato. Se realizan valoraciones nutricional, psiquiátrica, preanestésica y quirúrgica.</p>
+                <p class="mb-4 text-gray-700" data-translate-key="cirugia_p2">Al paciente se le explica en qué consiste la técnica quirúrgica, las posibles complicaciones y los resultados, firmando el correspondiente consentimiento informado. El objetivo del tratamiento quirúrgico es hacerle perder peso y que esta pérdida se mantenga a largo plazo.</p>
                 
-                <h3 class="mt-10">Bypass gástrico en Y de Roux por Laparoscopia</h3>
+                <h3 class="mt-10" data-translate-key="bypass_title">Bypass gástrico en Y de Roux por Laparoscopia</h3>
                 <div class="media-text-layout mt-6 media-right"> <div class="text-content">
-                        <p class="mb-3 text-gray-700">La cirugía se realiza bajo anestesia general y mediante laparoscopia, siendo menos agresiva. Se realiza a través de 5-6 orificios por donde se introducirá el material quirúrgico y de visión.</p>
-                        <p class="mb-3 text-gray-700">Consiste en cortar, grapar y seccionar la parte más alta del estómago dejando un estómago pequeño (reservorio gástrico) de aproximadamente 20-30ml. Seguidamente se divide el intestino y se une con el reservorio, de modo que los alimentos pasan directamente a tramos más lejanos del intestino delgado, ahorrándose la absorción de los alimentos en 1.5 a 2 metros.</p>
-                        <p class="text-gray-700">Con esto se come menos, se llega a la sensación de saciedad antes y, al pasar los alimentos a tramos más lejanos del intestino, se reduce la absorción de los alimentos, lo que conlleva pérdida de peso.</p>
+                        <p class="mb-3 text-gray-700" data-translate-key="bypass_p1">La cirugía se realiza bajo anestesia general y mediante laparoscopia, siendo menos agresiva. Se realiza a través de 5-6 orificios por donde se introducirá el material quirúrgico y de visión.</p>
+                        <p class="mb-3 text-gray-700" data-translate-key="bypass_p2">Consiste en cortar, grapar y seccionar la parte más alta del estómago dejando un estómago pequeño (reservorio gástrico) de aproximadamente 20-30ml. Seguidamente se divide el intestino y se une con el reservorio, de modo que los alimentos pasan directamente a tramos más lejanos del intestino delgado, ahorrándose la absorción de los alimentos en 1.5 a 2 metros.</p>
+                        <p class="text-gray-700" data-translate-key="bypass_p3">Con esto se come menos, se llega a la sensación de saciedad antes y, al pasar los alimentos a tramos más lejanos del intestino, se reduce la absorción de los alimentos, lo que conlleva pérdida de peso.</p>
                     </div>
                     <div class="media-content">
                         <div class="video-wrapper">
@@ -359,19 +400,19 @@
                     </div>
                 </div>
 
-                <h3 class="mt-10">Preparación Preoperatoria</h3>
-                <p class="mt-4 mb-4 text-gray-700">El paciente ingresa un día antes de la cirugía. Como tratamiento previo se administra terapia para evitar vómitos, antibióticos y terapia antitrombótica. El paciente debe ducharse antes de la cirugía, insistiendo en el abdomen. Si tiene vello en el abdomen, se rasurará con maquinilla eléctrica.</p>
+                <h3 class="mt-10" data-translate-key="preparacion_title">Preparación Preoperatoria</h3>
+                <p class="mt-4 mb-4 text-gray-700" data-translate-key="preparacion_p1">El paciente ingresa un día antes de la cirugía. Como tratamiento previo se administra terapia para evitar vómitos, antibióticos y terapia antitrombótica. El paciente debe ducharse antes de la cirugía, insistiendo en el abdomen. Si tiene vello en el abdomen, se rasurará con maquinilla eléctrica.</p>
             </div>
         </section>
         
         <section id="postoperatorio" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">Manejo y Seguimiento Postoperatorio</h2>
+                <h2 class="text-center" data-translate-key="postoperatorio_title">Manejo y Seguimiento Postoperatorio</h2>
                 
                 <div class="media-text-layout mt-8 media-right"> <div class="text-content">
-                        <h3 class="mt-0">Inmediato Postoperatorio</h3>
-                        <p class="mb-2 text-gray-700">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. Saldrá sin sonda nasal ni vesical, con medias de compresión y algunos con drenaje abdominal. Podrá levantarse cuando esté en la habitación, con precaución la primera vez. Es frecuente dolor en el hombro izquierdo y malestar abdominal. Si hay buena tolerancia, el alta es al 1º-2º día postoperatorio.</p>
-                        <p class="mb-4 text-gray-700">Al inicio de la alimentación líquida (24-48h después), notará plenitud. Beba con pajita o cucharadas lentamente. Se darán recomendaciones y tratamientos al alta: dieta bariátrica por fases, heparina subcutánea (25-30 días), omeprazol, complejo vitamínico y módulo proteico.</p>
+                        <h3 class="mt-0" data-translate-key="inmediato_postop_title">Inmediato Postoperatorio</h3>
+                        <p class="mb-2 text-gray-700" data-translate-key="inmediato_postop_p1">Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. Saldrá sin sonda nasal ni vesical, con medias de compresión y algunos con drenaje abdominal. Podrá levantarse cuando esté en la habitación, con precaución la primera vez. Es frecuente dolor en el hombro izquierdo y malestar abdominal. Si hay buena tolerancia, el alta es al 1º-2º día postoperatorio.</p>
+                        <p class="mb-4 text-gray-700" data-translate-key="inmediato_postop_p2">Al inicio de la alimentación líquida (24-48h después), notará plenitud. Beba con pajita o cucharadas lentamente. Se darán recomendaciones y tratamientos al alta: dieta bariátrica por fases, heparina subcutánea (25-30 días), omeprazol, complejo vitamínico y módulo proteico.</p>
                     </div>
                     <div class="media-content">
                          <div class="video-wrapper">
@@ -383,61 +424,61 @@
                     </div>
                 </div>
                 
-                <h3 class="mt-10">Primeros Días en Casa</h3>
-                <p class="mt-4 mb-2 text-gray-700">Puede presentar dolor abdominal difuso, no muy intenso, manejable con paracetamol diluido. Mejorará el dolor torácico al respirar con fisioterapia respiratoria (inflar globos). No debería vomitar ni doler el estómago; si ocurre, suele ser por comer rápido o en exceso.</p>
-                <p class="font-semibold text-red-600 mb-4 bg-red-50 p-3 rounded-md mt-4"><i class="fas fa-exclamation-triangle mr-2"></i>Importante: No tomará ningún alimento sólido ni bebida con gas. Existe peligro de complicación (dehiscencia de suturas, fístulas) si toma alimentos sólidos.</p>
+                <h3 class="mt-10" data-translate-key="primeros_dias_title">Primeros Días en Casa</h3>
+                <p class="mt-4 mb-2 text-gray-700" data-translate-key="primeros_dias_p1">Puede presentar dolor abdominal difuso, no muy intenso, manejable con paracetamol diluido. Mejorará el dolor torácico al respirar con fisioterapia respiratoria (inflar globos). No debería vomitar ni doler el estómago; si ocurre, suele ser por comer rápido o en exceso.</p>
+                <p class="font-semibold text-red-600 mb-4 bg-red-50 p-3 rounded-md mt-4"><i class="fas fa-exclamation-triangle mr-2"></i><span data-translate-key="primeros_dias_importante">Importante: No tomará ningún alimento sólido ni bebida con gas. Existe peligro de complicación (dehiscencia de suturas, fístulas) si toma alimentos sólidos.</span></p>
                 
-                <h3 class="mt-10">Seguimiento a Largo Plazo</h3>
-                <p class="mt-4 mb-4 text-gray-700">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. Es FUNDAMENTAL estar motivado, bien informado y aceptar el compromiso de seguir las indicaciones de por vida. Las revisiones en cirugía son a la semana, 15 días, al mes, a los 3, 6, 12, 18, 24 meses y luego anual hasta 5 años mínimo. Se realizan ecografías y tránsito gastrointestinal (TEGD) para valoración.</p>
+                <h3 class="mt-10" data-translate-key="seguimiento_largo_plazo_title">Seguimiento a Largo Plazo</h3>
+                <p class="mt-4 mb-4 text-gray-700" data-translate-key="seguimiento_largo_plazo_p1">El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. Es FUNDAMENTAL estar motivado, bien informado y aceptar el compromiso de seguir las indicaciones de por vida. Las revisiones en cirugía son a la semana, 15 días, al mes, a los 3, 6, 12, 18, 24 meses y luego anual hasta 5 años mínimo. Se realizan ecografías y tránsito gastrointestinal (TEGD) para valoración.</p>
             </div>
         </section>
 
         <section id="dieta" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">Dieta Postoperatoria por Fases</h2>
-                <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto">La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.</p>
+                <h2 class="text-center" data-translate-key="dieta_title">Dieta Postoperatoria por Fases</h2>
+                <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto" data-translate-key="dieta_subtitle">La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.</p>
 
                 <div class="space-y-4">
                     <details class="mb-3">
-                        <summary>FASE 1: Protección de la Cirugía (Primeros 7 días)</summary>
+                        <summary data-translate-key="dieta_fase1_summary">FASE 1: Protección de la Cirugía (Primeros 7 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                             <p><strong>Duración:</strong> 7 primeros días.</p>
-                             <p><strong>Objetivos:</strong> Garantizar consolidación de suturas (dieta líquida), protección y prevención de dilatación del reservorio gástrico (limitación de volumen).</p>
-                             <p><strong>Dieta:</strong> Textura líquida con control de volumen (iniciar con 30ml, máximo 50ml por toma en Bypass). Ingesta lenta y fraccionada (6-8 tomas/día). Hidratación con agua fuera de tomas (300-500ml/día). Agua puede ser difícil de tolerar; aromatizar con limón/naranja puede ayudar.</p>
-                             <p><strong>Alimentos:</strong> Agua, infusiones, zumos naturales diluidos y colados, lácteos líquidos desnatados (preferible sin lactosa), bebida vegetal, caldos de verduras y desgrasados de pollo/pavo. Evitar café y diuréticos hasta cubrir hidratación. Fundamental el aporte proteico con módulo prescrito (7-8 cucharadas soperas para bypass). Eliminar azúcar, usar canela, stevia, sucralosa, eritritol o cacao 100%.</p>
-                             <p><strong>Recomendaciones:</strong> Incorporar alimentos nuevos de uno en uno. Beber líquidos 30 min antes y 1h después de comidas. Tomas deben durar 30-45 min. No líquidos rápidos, ni en grandes sorbos, ni a temperaturas extremas, ni azucarados, ni gaseosos. Prohibido FUMAR. Dejar de comer si hay plenitud o dolor. Evitar agacharse/acostarse 1h post-ingesta.</p>
+                             <p><strong data-translate-key="dieta_fase1_duracion_label">Duración:</strong> <span data-translate-key="dieta_fase1_duracion_value">7 primeros días.</span></p>
+                             <p><strong data-translate-key="dieta_fase1_objetivos_label">Objetivos:</strong> <span data-translate-key="dieta_fase1_objetivos_value">Garantizar consolidación de suturas (dieta líquida), protección y prevención de dilatación del reservorio gástrico (limitación de volumen).</span></p>
+                             <p><strong data-translate-key="dieta_fase1_dieta_label">Dieta:</strong> <span data-translate-key="dieta_fase1_dieta_value">Textura líquida con control de volumen (iniciar con 30ml, máximo 50ml por toma en Bypass). Ingesta lenta y fraccionada (6-8 tomas/día). Hidratación con agua fuera de tomas (300-500ml/día). Agua puede ser difícil de tolerar; aromatizar con limón/naranja puede ayudar.</span></p>
+                             <p><strong data-translate-key="dieta_fase1_alimentos_label">Alimentos:</strong> <span data-translate-key="dieta_fase1_alimentos_value">Agua, infusiones, zumos naturales diluidos y colados, lácteos líquidos desnatados (preferible sin lactosa), bebida vegetal, caldos de verduras y desgrasados de pollo/pavo. Evitar café y diuréticos hasta cubrir hidratación. Fundamental el aporte proteico con módulo prescrito (7-8 cucharadas soperas para bypass). Eliminar azúcar, usar canela, stevia, sucralosa, eritritol o cacao 100%.</span></p>
+                             <p><strong data-translate-key="dieta_fase1_recomendaciones_label">Recomendaciones:</strong> <span data-translate-key="dieta_fase1_recomendaciones_value">Incorporar alimentos nuevos de uno en uno. Beber líquidos 30 min antes y 1h después de comidas. Tomas deben durar 30-45 min. No líquidos rápidos, ni en grandes sorbos, ni a temperaturas extremas, ni azucarados, ni gaseosos. Prohibido FUMAR. Dejar de comer si hay plenitud o dolor. Evitar agacharse/acostarse 1h post-ingesta.</span></p>
                         </div>
                     </details>
                      <details class="mb-3">
-                        <summary>FASE 2: Protección Quirúrgica (Siguientes 15 días)</summary>
+                        <summary data-translate-key="dieta_fase2_summary">FASE 2: Protección Quirúrgica (Siguientes 15 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> 15 días (tras Fase 1).</p>
-                            <p><strong>Dieta:</strong> Textura semilíquida (crema), volumen 100-150ml. Ingesta lenta y fraccionada (5-6 tomas/día).</p>
-                            <p><strong>Alimentos:</strong> Patata, verduras cocidas, frutas cocidas/horneadas (limitar alto contenido en fibra insoluble). Yogur, requesón, sopa de fideos muy cocidos. Pan tostado tipo biscote (NO ENTERO). Mantener módulo proteico e iniciar suplemento multivitamínico-mineral.</p>
+                            <p><strong data-translate-key="dieta_fase2_duracion_label">Duración:</strong> <span data-translate-key="dieta_fase2_duracion_value">15 días (tras Fase 1).</span></p>
+                            <p><strong data-translate-key="dieta_fase2_dieta_label">Dieta:</strong> <span data-translate-key="dieta_fase2_dieta_value">Textura semilíquida (crema), volumen 100-150ml. Ingesta lenta y fraccionada (5-6 tomas/día).</span></p>
+                            <p><strong data-translate-key="dieta_fase2_alimentos_label">Alimentos:</strong> <span data-translate-key="dieta_fase2_alimentos_value">Patata, verduras cocidas, frutas cocidas/horneadas (limitar alto contenido en fibra insoluble). Yogur, requesón, sopa de fideos muy cocidos. Pan tostado tipo biscote (NO ENTERO). Mantener módulo proteico e iniciar suplemento multivitamínico-mineral.</span></p>
                         </div>
                     </details>
                     <details class="mb-3">
-                        <summary>FASE 3: Protección Quirúrgica (Siguientes 15 días)</summary>
+                        <summary data-translate-key="dieta_fase3_summary">FASE 3: Protección Quirúrgica (Siguientes 15 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> 15 días (tras Fase 2).</p>
-                            <p><strong>Dieta:</strong> Textura semisólida (puré), volumen no superior a 150ml por toma. Ingesta lenta y fraccionada (5-6 tomas/día).</p>
-                            <p><strong>Alimentos:</strong> Legumbres sin piel, carnes blancas (pavo, pollo), pescado blanco, huevos. Cocción que mantenga hidratación (hervido, vapor, horno, microondas). Fruta cruda (evitando fibra insoluble). Ya no se toma módulo proteico, pero se mantiene suplemento multivitamínico de por vida.</p>
+                            <p><strong data-translate-key="dieta_fase3_duracion_label">Duración:</strong> <span data-translate-key="dieta_fase3_duracion_value">15 días (tras Fase 2).</span></p>
+                            <p><strong data-translate-key="dieta_fase3_dieta_label">Dieta:</strong> <span data-translate-key="dieta_fase3_dieta_value">Textura semisólida (puré), volumen no superior a 150ml por toma. Ingesta lenta y fraccionada (5-6 tomas/día).</span></p>
+                            <p><strong data-translate-key="dieta_fase3_alimentos_label">Alimentos:</strong> <span data-translate-key="dieta_fase3_alimentos_value">Legumbres sin piel, carnes blancas (pavo, pollo), pescado blanco, huevos. Cocción que mantenga hidratación (hervido, vapor, horno, microondas). Fruta cruda (evitando fibra insoluble). Ya no se toma módulo proteico, pero se mantiene suplemento multivitamínico de por vida.</span></p>
                         </div>
                     </details>
                     <details class="mb-3">
-                        <summary>FASE 4: Protección Quirúrgica (15 a 30 días)</summary>
+                        <summary data-translate-key="dieta_fase4_summary">FASE 4: Protección Quirúrgica (15 a 30 días)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> 15 a 30 días (tras Fase 3).</p>
-                            <p><strong>Dieta:</strong> Textura sólida de fácil masticación ("machacamiento manual con tenedor"), volumen 150-200ml. La boca debe ser el triturador previo. No se introducen nuevos alimentos en esta fase. Progresión en técnicas de cocción: hervido, vapor, horno, microondas y luego plancha.</p>
-                            <p><strong>Clave:</strong> Masticación y trituración oral son la clave. Ingesta rápida sin masticación adecuada puede causar dolor.</p>
+                            <p><strong data-translate-key="dieta_fase4_duracion_label">Duración:</strong> <span data-translate-key="dieta_fase4_duracion_value">15 a 30 días (tras Fase 3).</span></p>
+                            <p><strong data-translate-key="dieta_fase4_dieta_label">Dieta:</strong> <span data-translate-key="dieta_fase4_dieta_value">Textura sólida de fácil masticación ("machacamiento manual con tenedor"), volumen 150-200ml. La boca debe ser el triturador previo. No se introducen nuevos alimentos en esta fase. Progresión en técnicas de cocción: hervido, vapor, horno, microondas y luego plancha.</span></p>
+                            <p><strong data-translate-key="dieta_fase4_clave_label">Clave:</strong> <span data-translate-key="dieta_fase4_clave_value">Masticación y trituración oral son la clave. Ingesta rápida sin masticación adecuada puede causar dolor.</span></p>
                         </div>
                     </details>
                     <details class="mb-3">
-                        <summary>FASE 5: Tolerancia (Dieta Normalizada y Saludable)</summary>
+                        <summary data-translate-key="dieta_fase5_summary">FASE 5: Tolerancia (Dieta Normalizada y Saludable)</summary>
                         <div class="space-y-2 text-gray-700">
-                            <p><strong>Duración:</strong> Una vez finalizada la Fase 4.</p>
-                            <p><strong>Dieta:</strong> Progresiva introducción de alimentos más difíciles de tolerar: carnes blancas fibrosas (conejo), pescados azules, carnes rojas, pescados duros (sepia, calamar), verduras crudas de hoja verde, tomate (inicialmente sin piel), cereales y derivados (arroz, pasta, pan), frutas (cítricos). No se modifica la textura, pero introducir con progresión en técnicas culinarias. Volumen 150-200ml. Priorizar alimentos proteicos si no se alcanza objetivo por ingesta.</p>
-                            <p><strong>Alimentación variada y equilibrada:</strong> Frecuencias específicas para pescado blanco/azul, carnes blancas/rojas, legumbres, huevos, cereales, tubérculos, verduras, frutas, lácteos.</p>
+                            <p><strong data-translate-key="dieta_fase5_duracion_label">Duración:</strong> <span data-translate-key="dieta_fase5_duracion_value">Una vez finalizada la Fase 4.</span></p>
+                            <p><strong data-translate-key="dieta_fase5_dieta_label">Dieta:</strong> <span data-translate-key="dieta_fase5_dieta_value">Progresiva introducción de alimentos más difíciles de tolerar: carnes blancas fibrosas (conejo), pescados azules, carnes rojas, pescados duros (sepia, calamar), verduras crudas de hoja verde, tomate (inicialmente sin piel), cereales y derivados (arroz, pasta, pan), frutas (cítricos). No se modifica la textura, pero introducir con progresión en técnicas culinarias. Volumen 150-200ml. Priorizar alimentos proteicos si no se alcanza objetivo por ingesta.</span></p>
+                            <p><strong data-translate-key="dieta_fase5_alimentacion_label">Alimentación variada y equilibrada:</strong> <span data-translate-key="dieta_fase5_alimentacion_value">Frecuencias específicas para pescado blanco/azul, carnes blancas/rojas, legumbres, huevos, cereales, tubérculos, verduras, frutas, lácteos.</span></p>
                         </div>
                     </details>
                 </div>
@@ -449,15 +490,15 @@
         
         <section id="info-pacientes" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container text-center">
-                <h2 class="mb-6">Información para Pacientes</h2>
+                <h2 class="mb-6" data-translate-key="info_pacientes_title">Información para Pacientes</h2>
                 <div class="podcast-description text-gray-700">
-                    <p>Escucha nuestro podcast, donde la salud toma la palabra y la información rigurosa se convierte en compañía cercana para quienes necesitan respuestas. Hoy hablamos de un tema de enorme relevancia sanitaria y social: la obesidad patológica y su abordaje quirúrgico.</p>
-                    <p>Nos sumergiremos en el tratamiento más eficaz cuando otros métodos han fallado: el bypass gástrico por laparoscopia. Te explicaremos en qué consiste esta técnica, cómo se seleccionan los pacientes, qué pruebas se realizan antes de la cirugía y cómo es el proceso postoperatorio.</p>
-                    <p>Además, hablaremos de las distintas fases de la dieta tras la intervención, los cuidados médicos, la importancia del seguimiento multidisciplinar, y el compromiso a largo plazo que requiere esta opción terapéutica.</p>
-                    <p>🎙️ Este episodio se basa en el material elaborado por la Unidad de Cirugía Bariátrica del Servicio de Cirugía General del Hospital Clínico Universitario Virgen de la Arrixaca, bajo la supervisión de la Dra. María Dolores Frutos Bernal, especialista en cirugía bariátrica y metabólica. A ella le agradecemos su claridad, su compromiso y su cercanía con los pacientes.</p>
-                    <p>Si estás considerando esta intervención, si conoces a alguien que pueda beneficiarse de ella o simplemente quieres estar bien informado… este episodio es para ti.</p>
-                    <p>Porque perder peso no es solo una cuestión de estética, sino de salud, de calidad de vida y, muchas veces, de supervivencia.</p>
-                    <p>🩺 ¡Empezamos!</p>
+                    <p data-translate-key="podcast_intro1">Escucha nuestro podcast, donde la salud toma la palabra y la información rigurosa se convierte en compañía cercana para quienes necesitan respuestas. Hoy hablamos de un tema de enorme relevancia sanitaria y social: la obesidad patológica y su abordaje quirúrgico.</p>
+                    <p data-translate-key="podcast_intro2">Nos sumergiremos en el tratamiento más eficaz cuando otros métodos han fallado: el bypass gástrico por laparoscopia. Te explicaremos en qué consiste esta técnica, cómo se seleccionan los pacientes, qué pruebas se realizan antes de la cirugía y cómo es el proceso postoperatorio.</p>
+                    <p data-translate-key="podcast_intro3">Además, hablaremos de las distintas fases de la dieta tras la intervención, los cuidados médicos, la importancia del seguimiento multidisciplinar, y el compromiso a largo plazo que requiere esta opción terapéutica.</p>
+                    <p data-translate-key="podcast_credits">🎙️ Este episodio se basa en el material elaborado por la Unidad de Cirugía Bariátrica del Servicio de Cirugía General del Hospital Clínico Universitario Virgen de la Arrixaca, bajo la supervisión de la Dra. María Dolores Frutos Bernal, especialista en cirugía bariátrica y metabólica. A ella le agradecemos su claridad, su compromiso y su cercanía con los pacientes.</p>
+                    <p data-translate-key="podcast_audience">Si estás considerando esta intervención, si conoces a alguien que pueda beneficiarse de ella o simplemente quieres estar bien informado… este episodio es para ti.</p>
+                    <p data-translate-key="podcast_motivation">Porque perder peso no es solo una cuestión de estética, sino de salud, de calidad de vida y, muchas veces, de supervivencia.</p>
+                    <p data-translate-key="podcast_start">🩺 ¡Empezamos!</p>
                 </div>
                 <audio controls class="mx-auto shadow-lg rounded-md w-full max-w-md mt-8">
                     <source src="recursos/guiapacientes.mp3" type="audio/mpeg">
@@ -469,19 +510,19 @@
 
         <section id="equipo-humano" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">Nuestro Equipo Humano</h2>
-                <p class="text-gray-700 mt-8 mb-4">Equipo humano altamente capacitado y especializado en cirugía de obesidad. Este equipo está integrado por profesionales sanitarios de máximo prestigio y experiencia, dedicados a ofrecer tratamientos avanzados y personalizados para pacientes con obesidad mórbida.</p>
-                <p class="text-gray-700 mb-4">La unidad de obesidad del hospital se enfoca en proporcionar un enfoque integral y multidisciplinario, que incluye no solo la cirugía, sino también el seguimiento postoperatorio y el apoyo nutricional y psicológico necesario para asegurar el éxito a largo plazo del tratamiento.</p>
-                <p class="text-gray-700 mb-8">El hospital se compromete a utilizar la tecnología más avanzada y a brindar un trato excelente a cada paciente, manteniendo siempre como prioridad su bienestar y satisfacción.</p>
+                <h2 class="text-center" data-translate-key="equipo_humano_title">Nuestro Equipo Humano</h2>
+                <p class="text-gray-700 mt-8 mb-4" data-translate-key="equipo_humano_p1">Equipo humano altamente capacitado y especializado en cirugía de obesidad. Este equipo está integrado por profesionales sanitarios de máximo prestigio y experiencia, dedicados a ofrecer tratamientos avanzados y personalizados para pacientes con obesidad mórbida.</p>
+                <p class="text-gray-700 mb-4" data-translate-key="equipo_humano_p2">La unidad de obesidad del hospital se enfoca en proporcionar un enfoque integral y multidisciplinario, que incluye no solo la cirugía, sino también el seguimiento postoperatorio y el apoyo nutricional y psicológico necesario para asegurar el éxito a largo plazo del tratamiento.</p>
+                <p class="text-gray-700 mb-8" data-translate-key="equipo_humano_p3">El hospital se compromete a utilizar la tecnología más avanzada y a brindar un trato excelente a cada paciente, manteniendo siempre como prioridad su bienestar y satisfacción.</p>
                 
                 <div class="team-grid">
                     <div class="team-member-card">
                         <img src="recursos/img/Coco.jpg" alt="[Foto de la Dra. Frutos Bernal]">
-                        <p class="member-name mt-4">Dra. Frutos Bernal</p>
+                        <p class="member-name mt-4" data-translate-key="equipo_dra_frutos">Dra. Frutos Bernal</p>
                     </div>
                     <div class="team-member-card">
                         <img src="recursos/img/Andres.jpg" alt="[Foto del Dr. Balaguer Román]">
-                        <p class="member-name mt-4">Dr. Balaguer Román</p>
+                        <p class="member-name mt-4" data-translate-key="equipo_dr_balaguer">Dr. Balaguer Román</p>
                     </div>
                 </div>
             </div>
@@ -490,42 +531,42 @@
         <section id="contacto" class="py-16 md:py-24">
              <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900">Contáctanos y Da el Primer Paso</h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.</p>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900" data-translate-key="contacto_title">Contáctanos y Da el Primer Paso</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-translate-key="contacto_subtitle">Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.</p>
                 </div>
                 <div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-gray-200 section-container">
                     <form id="contactForm" class="space-y-6">
                         <div>
-                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo <span class="text-red-500">*</span></label>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_nombre">Nombre Completo <span class="text-red-500">*</span></label>
                             <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico <span class="text-red-500">*</span></label>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_email">Correo Electrónico <span class="text-red-500">*</span></label>
                             <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
                         <div>
-                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono (Opcional)</label>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_telefono">Teléfono (Opcional)</label>
                             <input type="tel" id="telefono" name="telefono" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
                         </div>
                         <div>
-                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje <span class="text-red-500">*</span></label>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1" data-translate-key="form_mensaje">Mensaje <span class="text-red-500">*</span></label>
                             <textarea id="mensaje" name="mensaje" rows="5" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
                         </div>
                         <div>
                             <button type="submit" class="w-full btn-primary py-3 text-base">
-                                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                                <i class="fas fa-paper-plane mr-2"></i><span data-translate-key="form_enviar">Enviar Mensaje</span>
                             </button>
                         </div>
                     </form>
                     <div class="mt-10 text-center">
-                        <p class="text-gray-700 mb-4">O si lo prefieres:</p>
+                        <p class="text-gray-700 mb-4" data-translate-key="contacto_alternativa">O si lo prefieres:</p>
                         <a href="https://wa.me/TUNUMERODETELEFONO?text=Hola,%20deseo%20más%20información%20sobre%20la%20cirugía%20bariátrica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 shadow-md hover:shadow-lg mb-4 text-base">
-                            <i class="fab fa-whatsapp fa-lg mr-3"></i> Chatear por WhatsApp
+                            <i class="fab fa-whatsapp fa-lg mr-3"></i> <span data-translate-key="contacto_whatsapp">Chatear por WhatsApp</span>
                         </a>
                         <div class="mt-6 text-sm text-gray-600 space-y-2">
-                            <p><i class="fas fa-phone-alt mr-2 text-emerald-600"></i>Teléfono: [Tu Teléfono de Contacto]</p>
-                            <p><i class="fas fa-envelope mr-2 text-emerald-600"></i>Email: [Tu Email de Contacto]</p>
-                            <p><i class="fas fa-map-marker-alt mr-2 text-emerald-600"></i>Ubicación: Hospital Clínico Universitario Virgen de la Arrixaca, Murcia</p>
+                            <p><i class="fas fa-phone-alt mr-2 text-emerald-600"></i><span data-translate-key="contacto_telefono_label">Teléfono:</span> [Tu Teléfono de Contacto]</p>
+                            <p><i class="fas fa-envelope mr-2 text-emerald-600"></i><span data-translate-key="contacto_email_label">Email:</span> [Tu Email de Contacto]</p>
+                            <p><i class="fas fa-map-marker-alt mr-2 text-emerald-600"></i><span data-translate-key="contacto_ubicacion_label">Ubicación:</span> Hospital Clínico Universitario Virgen de la Arrixaca, Murcia</p>
                         </div>
                     </div>
                 </div>
@@ -535,16 +576,459 @@
 
     <footer class="bg-blue-800 text-blue-50 py-10 text-center">
         <div class="container mx-auto px-4 sm:px-6">
-            <p class="mb-2">&copy; <span id="currentYear"></span> [Nombre de tu Clínica o Doctor Principal]. Todos los derechos reservados.</p>
-            <p class="text-sm mb-1 text-blue-200">Unidad de Cirugía Bariátrica y Metabólica</p>
-            <p class="text-xs text-blue-200">Hospital Clínico Universitario Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, España.</p>
+            <p class="mb-2" data-translate-key="footer_copyright">&copy; <span id="currentYear"></span> [Nombre de tu Clínica o Doctor Principal]. Todos los derechos reservados.</p>
+            <p class="text-sm mb-1 text-blue-200" data-translate-key="footer_unidad">Unidad de Cirugía Bariátrica y Metabólica</p>
+            <p class="text-xs text-blue-200" data-translate-key="footer_hospital">Hospital Clínico Universitario Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, España.</p>
         </div>
     </footer>
 
     <script>
-        // Scroll al inicio de la página al cargar
+        // Objeto con todas las traducciones
+        const translations = {
+            es: {
+                meta_title: "Cirugía Bariátrica y Metabólica - Especialistas en Obesidad",
+                meta_description: "Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo bypass gástrico, manga gástrica y cuidados postoperatorios por un equipo experto.",
+                meta_keywords: "cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad, equipo obesidad",
+                og_title: "Cirugía Bariátrica y Metabólica - Especialistas en Obesidad",
+                og_description: "Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.",
+                twitter_title: "Cirugía Bariátrica y Metabólica - Especialistas en Obesidad",
+                twitter_description: "Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.",
+                nav_inicio: "Inicio",
+                nav_que_es_obesidad: "Qué es la Obesidad",
+                nav_cirugia: "La Cirugía",
+                nav_postoperatorio: "Postoperatorio",
+                nav_dieta: "Dieta",
+                nav_info_pacientes: "Info Pacientes",
+                nav_equipo_humano: "Equipo Humano",
+                nav_contacto: "Contacto",
+                nav_inicio_mobile: "Inicio",
+                nav_que_es_obesidad_mobile: "Qué es la Obesidad",
+                nav_cirugia_mobile: "La Cirugía",
+                nav_postoperatorio_mobile: "Postoperatorio",
+                nav_dieta_mobile: "Dieta y Fases",
+                nav_info_pacientes_mobile: "Info Pacientes",
+                nav_equipo_humano_mobile: "Equipo Humano",
+                nav_contacto_mobile: "Contacto",
+                hero_title: "Tratamiento Quirúrgico de la Obesidad Patológica",
+                hero_subtitle: "Bypass Gástrico por Laparoscopia. Recupera tu salud y calidad de vida en el Hospital Clínico Universitario Virgen de la Arrixaca.",
+                que_es_obesidad_title: "¿Qué es la Obesidad?",
+                que_es_obesidad_p1: "La obesidad hoy en día es considerada la epidemia del siglo XXI. Es una enfermedad que afecta al 15% de la población y consiste en un exceso de grasa corporal. Las causas de la obesidad son múltiples y complejas: alimentación inadecuada, falta de ejercicio físico, metabólicas y genéticas.",
+                que_es_obesidad_p2: "Para medir el grado de obesidad se utiliza el Índice de Masa Corporal (IMC), que se calcula al dividir el peso en kilogramos entre la talla en metros al cuadrado. Ejemplo: Paciente que pesa 128 kg y mide 1.60 m. IMC: $128 / (1.60 \\times 1.60) = 50$.",
+                grados_obesidad_title: "Grados de Obesidad (IMC)",
+                table_grado: "Grado",
+                table_imc: "IMC",
+                grado_leve: "Leve",
+                grado_moderada: "Moderada",
+                grado_severa: "Severa",
+                grado_morbida: "MÓRBIDA",
+                grado_superobesidad: "Superobesidad",
+                grado_supersuperobesidad: "Supersuperobesidad",
+                grado_triple: "Obesidad triple",
+                que_es_obesidad_p3: "Las personas con obesidad tienen mayor posibilidad de sufrir enfermedades graves (comorbilidad) que van a alterar su salud y calidad de vida, como Hipertensión Arterial, Diabetes Mellitus, Trastornos del sueño, Apnea, Asma, Artrosis, Dolor de espalda, Reflujo Gastroesofágico, y Alteraciones menstruales. Por todas estas razones es necesaria la pérdida de peso, y para la mayoría de los pacientes con obesidad patológica la cirugía es la única solución.",
+                cuando_intervenir_title: "¿Cuándo se debe intervenir a un paciente con obesidad?",
+                cuando_intervenir_li1: "Pacientes con IMC de 30 asociado a comorbilidad.",
+                cuando_intervenir_li2: "Pacientes con IMC mayor o igual a 35.",
+                cuando_intervenir_li3: "Obesidad mantenida durante 5 años con fracaso de otros tratamientos.",
+                cuando_intervenir_li4: "Seguridad en la cooperación del paciente a largo plazo.",
+                cuando_intervenir_li5: "Consentimiento informado y asunción del riesgo quirúrgico.",
+                cirugia_title: "La Cirugía: Bypass Gástrico por Laparoscopia",
+                cirugia_p1: "Los candidatos a cirugía son valorados por un equipo multidisciplinario del hospital (endocrinólogos, psicólogos, cirujanos, etc.) que decidirán si el paciente es candidato. Se realizan valoraciones nutricional, psiquiátrica, preanestésica y quirúrgica.",
+                cirugia_p2: "Al paciente se le explica en qué consiste la técnica quirúrgica, las posibles complicaciones y los resultados, firmando el correspondiente consentimiento informado. El objetivo del tratamiento quirúrgico es hacerle perder peso y que esta pérdida se mantenga a largo plazo.",
+                bypass_title: "Bypass gástrico en Y de Roux por Laparoscopia",
+                bypass_p1: "La cirugía se realiza bajo anestesia general y mediante laparoscopia, siendo menos agresiva. Se realiza a través de 5-6 orificios por donde se introducirá el material quirúrgico y de visión.",
+                bypass_p2: "Consiste en cortar, grapar y seccionar la parte más alta del estómago dejando un estómago pequeño (reservorio gástrico) de aproximadamente 20-30ml. Seguidamente se divide el intestino y se une con el reservorio, de modo que los alimentos pasan directamente a tramos más lejanos del intestino delgado, ahorrándose la absorción de los alimentos en 1.5 a 2 metros.",
+                bypass_p3: "Con esto se come menos, se llega a la sensación de saciedad antes y, al pasar los alimentos a tramos más lejanos del intestino, se reduce la absorción de los alimentos, lo que conlleva pérdida de peso.",
+                preparacion_title: "Preparación Preoperatoria",
+                preparacion_p1: "El paciente ingresa un día antes de la cirugía. Como tratamiento previo se administra terapia para evitar vómitos, antibióticos y terapia antitrombótica. El paciente debe ducharse antes de la cirugía, insistiendo en el abdomen. Si tiene vello en el abdomen, se rasurará con maquinilla eléctrica.",
+                postoperatorio_title: "Manejo y Seguimiento Postoperatorio",
+                inmediato_postop_title: "Inmediato Postoperatorio",
+                inmediato_postop_p1: "Finalizada la intervención, el paciente pasará a la unidad de Reanimación postquirúrgica. Saldrá sin sonda nasal ni vesical, con medias de compresión y algunos con drenaje abdominal. Podrá levantarse cuando esté en la habitación, con precaución la primera vez. Es frecuente dolor en el hombro izquierdo y malestar abdominal. Si hay buena tolerancia, el alta es al 1º-2º día postoperatorio.",
+                inmediato_postop_p2: "Al inicio de la alimentación líquida (24-48h después), notará plenitud. Beba con pajita o cucharadas lentamente. Se darán recomendaciones y tratamientos al alta: dieta bariátrica por fases, heparina subcutánea (25-30 días), omeprazol, complejo vitamínico y módulo proteico.",
+                primeros_dias_title: "Primeros Días en Casa",
+                primeros_dias_p1: "Puede presentar dolor abdominal difuso, no muy intenso, manejable con paracetamol diluido. Mejorará el dolor torácico al respirar con fisioterapia respiratoria (inflar globos). No debería vomitar ni doler el estómago; si ocurre, suele ser por comer rápido o en exceso.",
+                primeros_dias_importante: "Importante: No tomará ningún alimento sólido ni bebida con gas. Existe peligro de complicación (dehiscencia de suturas, fístulas) si toma alimentos sólidos.",
+                seguimiento_largo_plazo_title: "Seguimiento a Largo Plazo",
+                seguimiento_largo_plazo_p1: "El seguimiento es realizado por endocrinos, nutricionista, cirujanos y psicólogos. Es FUNDAMENTAL estar motivado, bien informado y aceptar el compromiso de seguir las indicaciones de por vida. Las revisiones en cirugía son a la semana, 15 días, al mes, a los 3, 6, 12, 18, 24 meses y luego anual hasta 5 años mínimo. Se realizan ecografías y tránsito gastrointestinal (TEGD) para valoración.",
+                dieta_title: "Dieta Postoperatoria por Fases",
+                dieta_subtitle: "La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.",
+                dieta_fase1_summary: "FASE 1: Protección de la Cirugía (Primeros 7 días)",
+                dieta_fase1_duracion_label: "Duración:",
+                dieta_fase1_duracion_value: "7 primeros días.",
+                dieta_fase1_objetivos_label: "Objetivos:",
+                dieta_fase1_objetivos_value: "Garantizar consolidación de suturas (dieta líquida), protección y prevención de dilatación del reservorio gástrico (limitación de volumen).",
+                dieta_fase1_dieta_label: "Dieta:",
+                dieta_fase1_dieta_value: "Textura líquida con control de volumen (iniciar con 30ml, máximo 50ml por toma en Bypass). Ingesta lenta y fraccionada (6-8 tomas/día). Hidratación con agua fuera de tomas (300-500ml/día). Agua puede ser difícil de tolerar; aromatizar con limón/naranja puede ayudar.",
+                dieta_fase1_alimentos_label: "Alimentos:",
+                dieta_fase1_alimentos_value: "Agua, infusiones, zumos naturales diluidos y colados, lácteos líquidos desnatados (preferible sin lactosa), bebida vegetal, caldos de verduras y desgrasados de pollo/pavo. Evitar café y diuréticos hasta cubrir hidratación. Fundamental el aporte proteico con módulo prescrito (7-8 cucharadas soperas para bypass). Eliminar azúcar, usar canela, stevia, sucralosa, eritritol o cacao 100%.",
+                dieta_fase1_recomendaciones_label: "Recomendaciones:",
+                dieta_fase1_recomendaciones_value: "Incorporar alimentos nuevos de uno en uno. Beber líquidos 30 min antes y 1h después de comidas. Tomas deben durar 30-45 min. No líquidos rápidos, ni en grandes sorbos, ni a temperaturas extremas, ni azucarados, ni gaseosos. Prohibido FUMAR. Dejar de comer si hay plenitud o dolor. Evitar agacharse/acostarse 1h post-ingesta.",
+                dieta_fase2_summary: "FASE 2: Protección Quirúrgica (Siguientes 15 días)",
+                dieta_fase2_duracion_label: "Duración:",
+                dieta_fase2_duracion_value: "15 días (tras Fase 1).",
+                dieta_fase2_dieta_label: "Dieta:",
+                dieta_fase2_dieta_value: "Textura semilíquida (crema), volumen 100-150ml. Ingesta lenta y fraccionada (5-6 tomas/día).",
+                dieta_fase2_alimentos_label: "Alimentos:",
+                dieta_fase2_alimentos_value: "Patata, verduras cocidas, frutas cocidas/horneadas (limitar alto contenido en fibra insoluble). Yogur, requesón, sopa de fideos muy cocidos. Pan tostado tipo biscote (NO ENTERO). Mantener módulo proteico e iniciar suplemento multivitamínico-mineral.",
+                dieta_fase3_summary: "FASE 3: Protección Quirúrgica (Siguientes 15 días)",
+                dieta_fase3_duracion_label: "Duración:",
+                dieta_fase3_duracion_value: "15 días (tras Fase 2).",
+                dieta_fase3_dieta_label: "Dieta:",
+                dieta_fase3_dieta_value: "Textura semisólida (puré), volumen no superior a 150ml por toma. Ingesta lenta y fraccionada (5-6 tomas/día).",
+                dieta_fase3_alimentos_label: "Alimentos:",
+                dieta_fase3_alimentos_value: "Legumbres sin piel, carnes blancas (pavo, pollo), pescado blanco, huevos. Cocción que mantenga hidratación (hervido, vapor, horno, microondas). Fruta cruda (evitando fibra insoluble). Ya no se toma módulo proteico, pero se mantiene suplemento multivitamínico de por vida.",
+                dieta_fase4_summary: "FASE 4: Protección Quirúrgica (15 a 30 días)",
+                dieta_fase4_duracion_label: "Duración:",
+                dieta_fase4_duracion_value: "15 a 30 días (tras Fase 3).",
+                dieta_fase4_dieta_label: "Dieta:",
+                dieta_fase4_dieta_value: "Textura sólida de fácil masticación (\"machacamiento manual con tenedor\"), volumen 150-200ml. La boca debe ser el triturador previo. No se introducen nuevos alimentos en esta fase. Progresión en técnicas de cocción: hervido, vapor, horno, microondas y luego plancha.",
+                dieta_fase4_clave_label: "Clave:",
+                dieta_fase4_clave_value: "Masticación y trituración oral son la clave. Ingesta rápida sin masticación adecuada puede causar dolor.",
+                dieta_fase5_summary: "FASE 5: Tolerancia (Dieta Normalizada y Saludable)",
+                dieta_fase5_duracion_label: "Duración:",
+                dieta_fase5_duracion_value: "Una vez finalizada la Fase 4.",
+                dieta_fase5_dieta_label: "Dieta:",
+                dieta_fase5_dieta_value: "Progresiva introducción de alimentos más difíciles de tolerar: carnes blancas fibrosas (conejo), pescados azules, carnes rojas, pescados duros (sepia, calamar), verduras crudas de hoja verde, tomate (inicialmente sin piel), cereales y derivados (arroz, pasta, pan), frutas (cítricos). No se modifica la textura, pero introducir con progresión en técnicas culinarias. Volumen 150-200ml. Priorizar alimentos proteicos si no se alcanza objetivo por ingesta.",
+                dieta_fase5_alimentacion_label: "Alimentación variada y equilibrada:",
+                dieta_fase5_alimentacion_value: "Frecuencias específicas para pescado blanco/azul, carnes blancas/rojas, legumbres, huevos, cereales, tubérculos, verduras, frutas, lácteos.",
+                info_pacientes_title: "Información para Pacientes",
+                podcast_intro1: "Escucha nuestro podcast, donde la salud toma la palabra y la información rigurosa se convierte en compañía cercana para quienes necesitan respuestas. Hoy hablamos de un tema de enorme relevancia sanitaria y social: la obesidad patológica y su abordaje quirúrgico.",
+                podcast_intro2: "Nos sumergiremos en el tratamiento más eficaz cuando otros métodos han fallado: el bypass gástrico por laparoscopia. Te explicaremos en qué consiste esta técnica, cómo se seleccionan los pacientes, qué pruebas se realizan antes de la cirugía y cómo es el proceso postoperatorio.",
+                podcast_intro3: "Además, hablaremos de las distintas fases de la dieta tras la intervención, los cuidados médicos, la importancia del seguimiento multidisciplinar, y el compromiso a largo plazo que requiere esta opción terapéutica.",
+                podcast_credits: "🎙️ Este episodio se basa en el material elaborado por la Unidad de Cirugía Bariátrica del Servicio de Cirugía General del Hospital Clínico Universitario Virgen de la Arrixaca, bajo la supervisión de la Dra. María Dolores Frutos Bernal, especialista en cirugía bariátrica y metabólica. A ella le agradecemos su claridad, su compromiso y su cercanía con los pacientes.",
+                podcast_audience: "Si estás considerando esta intervención, si conoces a alguien que pueda beneficiarse de ella o simplemente quieres estar bien informado… este episodio es para ti.",
+                podcast_motivation: "Porque perder peso no es solo una cuestión de estética, sino de salud, de calidad de vida y, muchas veces, de supervivencia.",
+                podcast_start: "🩺 ¡Empezamos!",
+                equipo_humano_title: "Nuestro Equipo Humano",
+                equipo_humano_p1: "Equipo humano altamente capacitado y especializado en cirugía de obesidad. Este equipo está integrado por profesionales sanitarios de máximo prestigio y experiencia, dedicados a ofrecer tratamientos avanzados y personalizados para pacientes con obesidad mórbida.",
+                equipo_humano_p2: "La unidad de obesidad del hospital se enfoca en proporcionar un enfoque integral y multidisciplinario, que incluye no solo la cirugía, sino también el seguimiento postoperatorio y el apoyo nutricional y psicológico necesario para asegurar el éxito a largo plazo del tratamiento.",
+                equipo_humano_p3: "El hospital se compromete a utilizar la tecnología más avanzada y a brindar un trato excelente a cada paciente, manteniendo siempre como prioridad su bienestar y satisfacción.",
+                equipo_dra_frutos: "Dra. Frutos Bernal",
+                equipo_dr_balaguer: "Dr. Balaguer Román",
+                contacto_title: "Contáctanos y Da el Primer Paso",
+                contacto_subtitle: "Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto directo.",
+                form_nombre: "Nombre Completo",
+                form_email: "Correo Electrónico",
+                form_telefono: "Teléfono (Opcional)",
+                form_mensaje: "Mensaje",
+                form_enviar: "Enviar Mensaje",
+                contacto_alternativa: "O si lo prefieres:",
+                contacto_whatsapp: "Chatear por WhatsApp",
+                contacto_telefono_label: "Teléfono:",
+                contacto_email_label: "Email:",
+                contacto_ubicacion_label: "Ubicación:",
+                footer_copyright: "&copy; <span id=\"currentYear\"></span> [Nombre de tu Clínica o Doctor Principal]. Todos los derechos reservados.",
+                footer_unidad: "Unidad de Cirugía Bariátrica y Metabólica",
+                footer_hospital: "Hospital Clínico Universitario Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, España."
+            },
+            en: {
+                meta_title: "Bariatric and Metabolic Surgery - Obesity Specialists",
+                meta_description: "Complete information on the surgical treatment of pathological obesity, including laparoscopic gastric bypass and postoperative care by an expert team.",
+                meta_keywords: "bariatric surgery, gastric bypass, sleeve gastrectomy, obesity, laparoscopy, weight loss, Arrixaca, Murcia, obesity treatment, obesity team",
+                og_title: "Bariatric and Metabolic Surgery - Obesity Specialists",
+                og_description: "Advanced treatments for morbid obesity. Meet our team and surgical options.",
+                twitter_title: "Bariatric and Metabolic Surgery - Obesity Specialists",
+                twitter_description: "Advanced treatments for morbid obesity. Meet our team and surgical options.",
+                nav_inicio: "Home",
+                nav_que_es_obesidad: "What is Obesity?",
+                nav_cirugia: "The Surgery",
+                nav_postoperatorio: "Postoperative",
+                nav_dieta: "Diet",
+                nav_info_pacientes: "Patient Info",
+                nav_equipo_humano: "Our Team",
+                nav_contacto: "Contact",
+                nav_inicio_mobile: "Home",
+                nav_que_es_obesidad_mobile: "What is Obesity?",
+                nav_cirugia_mobile: "The Surgery",
+                nav_postoperatorio_mobile: "Postoperative",
+                nav_dieta_mobile: "Diet and Phases",
+                nav_info_pacientes_mobile: "Patient Info",
+                nav_equipo_humano_mobile: "Our Team",
+                nav_contacto_mobile: "Contact",
+                hero_title: "Surgical Treatment of Pathological Obesity",
+                hero_subtitle: "Laparoscopic Gastric Bypass. Recover your health and quality of life at the Virgen de la Arrixaca University Clinical Hospital.",
+                que_es_obesidad_title: "What is Obesity?",
+                que_es_obesidad_p1: "Obesity today is considered the epidemic of the 21st century. It is a disease that affects 15% of the population and consists of an excess of body fat. The causes of obesity are multiple and complex: inadequate diet, lack of physical exercise, metabolic and genetic factors.",
+                que_es_obesidad_p2: "To measure the degree of obesity, the Body Mass Index (BMI) is used, which is calculated by dividing the weight in kilograms by the height in meters squared. Example: Patient weighing 128 kg and measuring 1.60 m. BMI: $128 / (1.60 \\times 1.60) = 50$.",
+                grados_obesidad_title: "Degrees of Obesity (BMI)",
+                table_grado: "Degree",
+                table_imc: "BMI",
+                grado_leve: "Mild",
+                grado_moderada: "Moderate",
+                grado_severa: "Severe",
+                grado_morbida: "MORBID",
+                grado_superobesidad: "Super Obesity",
+                grado_supersuperobesidad: "Super Super Obesity",
+                grado_triple: "Triple Obesity",
+                que_es_obesidad_p3: "People with obesity are more likely to suffer from serious diseases (comorbidities) that will alter their health and quality of life, such as Arterial Hypertension, Diabetes Mellitus, Sleep Disorders, Apnea, Asthma, Osteoarthritis, Back Pain, Gastroesophageal Reflux, and Menstrual Disorders. For all these reasons, weight loss is necessary, and for most patients with pathological obesity, surgery is the only solution.",
+                cuando_intervenir_title: "When should a patient with obesity undergo surgery?",
+                cuando_intervenir_li1: "Patients with BMI of 30 associated with comorbidity.",
+                cuando_intervenir_li2: "Patients with BMI greater than or equal to 35.",
+                cuando_intervenir_li3: "Obesity maintained for 5 years with failure of other treatments.",
+                cuando_intervenir_li4: "Assurance of long-term patient cooperation.",
+                cuando_intervenir_li5: "Informed consent and assumption of surgical risk.",
+                cirugia_title: "The Surgery: Laparoscopic Gastric Bypass",
+                cirugia_p1: "Candidates for surgery are evaluated by a multidisciplinary hospital team (endocrinologists, psychologists, surgeons, etc.) who will decide if the patient is a candidate. Nutritional, psychiatric, pre-anesthetic, and surgical evaluations are performed.",
+                cirugia_p2: "The patient is explained the surgical technique, possible complications, and results, signing the corresponding informed consent. The objective of surgical treatment is to achieve weight loss and maintain it long-term.",
+                bypass_title: "Laparoscopic Roux-en-Y Gastric Bypass",
+                bypass_p1: "The surgery is performed under general anesthesia and laparoscopically, being less aggressive. It is performed through 5-6 small incisions where surgical material and a camera are introduced.",
+                bypass_p2: "It consists of cutting, stapling, and sectioning the upper part of the stomach, leaving a small stomach pouch (gastric reservoir) of approximately 20-30ml. Next, the intestine is divided and connected to the reservoir, so that food passes directly to more distant parts of the small intestine, bypassing the absorption of food for 1.5 to 2 meters.",
+                bypass_p3: "This results in eating less, reaching satiety sooner, and, as food passes to more distant parts of the intestine, reduced food absorption, leading to weight loss.",
+                preparacion_title: "Preoperative Preparation",
+                preparacion_p1: "The patient is admitted one day before surgery. Pre-treatment includes therapy to prevent vomiting, antibiotics, and antithrombotic therapy. The patient must shower before surgery, paying special attention to the abdomen. If there is hair on the abdomen, it will be shaved with an electric razor.",
+                postoperatorio_title: "Postoperative Management and Follow-up",
+                inmediato_postop_title: "Immediate Postoperative Period",
+                inmediato_postop_p1: "After the intervention, the patient will be transferred to the post-surgical recovery unit. They will leave without a nasal or bladder catheter, with compression stockings, and some with an abdominal drain. They will be able to get up in the room, with caution the first time. Left shoulder pain and abdominal discomfort are common. If tolerance is good, discharge is on the 1st-2nd postoperative day.",
+                inmediato_postop_p2: "At the beginning of liquid feeding (24-48h later), you will notice fullness. Drink with a straw or spoonfuls slowly. Recommendations and treatments will be given at discharge: phased bariatric diet, subcutaneous heparin (25-30 days), omeprazole, vitamin complex, and protein module.",
+                primeros_dias_title: "First Days at Home",
+                primeros_dias_p1: "You may experience diffuse, not very intense, abdominal pain, manageable with diluted paracetamol. Chest pain when breathing will improve with respiratory physiotherapy (inflating balloons). You should not vomit or have stomach pain; if it occurs, it is usually due to eating too quickly or too much.",
+                primeros_dias_importante: "Important: You will not take any solid food or carbonated drinks. There is a danger of complications (suture dehiscence, fistulas) if you eat solid foods.",
+                seguimiento_largo_plazo_title: "Long-Term Follow-up",
+                seguimiento_largo_plazo_p1: "Follow-up is carried out by endocrinologists, nutritionists, surgeons, and psychologists. It is ESSENTIAL to be motivated, well-informed, and accept the commitment to follow indications for life. Surgical reviews are at one week, 15 days, one month, then at 3, 6, 12, 18, 24 months, and then annually for at least 5 years. Ultrasounds and gastrointestinal transit studies (UGI) are performed for assessment.",
+                dieta_title: "Postoperative Diet by Phases",
+                dieta_subtitle: "Diet progression is crucial for recovery and long-term success. Strictly follow your medical team's instructions.",
+                dieta_fase1_summary: "PHASE 1: Surgical Protection (First 7 days)",
+                dieta_fase1_duracion_label: "Duration:",
+                dieta_fase1_duracion_value: "First 7 days.",
+                dieta_fase1_objetivos_label: "Objectives:",
+                dieta_fase1_objetivos_value: "Ensure suture consolidation (liquid diet), protection, and prevention of gastric reservoir dilation (volume limitation).",
+                dieta_fase1_dieta_label: "Diet:",
+                dieta_fase1_dieta_value: "Liquid texture with volume control (start with 30ml, maximum 50ml per intake in Bypass). Slow and fractionated intake (6-8 intakes/day). Hydration with water between intakes (300-500ml/day). Water may be difficult to tolerate; flavoring with lemon/orange may help.",
+                dieta_fase1_alimentos_label: "Foods:",
+                dieta_fase1_alimentos_value: "Water, infusions, diluted and strained natural juices, skimmed liquid dairy (preferably lactose-free), plant-based drink, vegetable broths, and degreased chicken/turkey broths. Avoid coffee and diuretics until hydration is covered. Protein intake with prescribed module is essential (7-8 tablespoons for bypass). Eliminate sugar, use cinnamon, stevia, sucralose, erythritol, or 100% cocoa.",
+                dieta_fase1_recomendaciones_label: "Recommendations:",
+                dieta_fase1_recomendaciones_value: "Introduce new foods one at a time. Drink liquids 30 min before and 1h after meals. Intakes should last 30-45 min. No fast liquids, large sips, extreme temperatures, sugary, or carbonated drinks. NO SMOKING. Stop eating if full or in pain. Avoid bending/lying down 1h post-intake.",
+                dieta_fase2_summary: "PHASE 2: Surgical Protection (Next 15 days)",
+                dieta_fase2_duracion_label: "Duration:",
+                dieta_fase2_duracion_value: "15 days (after Phase 1).",
+                dieta_fase2_dieta_label: "Diet:",
+                dieta_fase2_dieta_value: "Semi-liquid texture (cream), volume 100-150ml. Slow and fractionated intake (5-6 intakes/day).",
+                dieta_fase2_alimentos_label: "Foods:",
+                dieta_fase2_alimentos_value: "Potato, cooked vegetables, cooked/baked fruits (limit high insoluble fiber content). Yogurt, cottage cheese, well-cooked noodle soup. Toasted bread like biscotti (NOT WHOLE). Maintain protein module and start multivitamin-mineral supplement.",
+                dieta_fase3_summary: "PHASE 3: Surgical Protection (Next 15 days)",
+                dieta_fase3_duracion_label: "Duration:",
+                dieta_fase3_duracion_value: "15 days (after Phase 2).",
+                dieta_fase3_dieta_label: "Diet:",
+                dieta_fase3_dieta_value: "Semi-solid texture (puree), volume not exceeding 150ml per intake. Slow and fractionated intake (5-6 intakes/day).",
+                dieta_fase3_alimentos_label: "Foods:",
+                dieta_fase3_alimentos_value: "Peeled legumes, white meats (turkey, chicken), white fish, eggs. Cooking that maintains hydration (boiled, steamed, baked, microwaved). Raw fruit (avoiding insoluble fiber). Protein module is no longer taken, but multivitamin supplement is maintained for life.",
+                dieta_fase4_summary: "PHASE 4: Surgical Protection (15 to 30 days)",
+                dieta_fase4_duracion_label: "Duration:",
+                dieta_fase4_duracion_value: "15 to 30 days (after Phase 3).",
+                dieta_fase4_dieta_label: "Diet:",
+                dieta_fase4_dieta_value: "Solid texture easy to chew (\"manual mashing with a fork\"), volume 150-200ml. The mouth should be the pre-grinder. No new foods are introduced in this phase. Progression in cooking techniques: boiled, steamed, baked, microwaved, then grilled.",
+                dieta_fase4_clave_label: "Key:",
+                dieta_fase4_clave_value: "Chewing and oral grinding are key. Fast intake without proper chewing can cause pain.",
+                dieta_fase5_summary: "PHASE 5: Tolerance (Normalized and Healthy Diet)",
+                dieta_fase5_duracion_label: "Duration:",
+                dieta_fase5_duracion_value: "After Phase 4 is completed.",
+                dieta_fase5_dieta_label: "Diet:",
+                dieta_fase5_dieta_value: "Progressive introduction of harder-to-tolerate foods: fibrous white meats (rabbit), oily fish, red meats, tough fish (cuttlefish, squid), raw green leafy vegetables, tomato (initially without skin), cereals and derivatives (rice, pasta, bread), fruits (citrus). Texture is not modified, but introduce with progression in culinary techniques. Volume 150-200ml. Prioritize protein foods if target is not met by intake.",
+                dieta_fase5_alimentacion_label: "Varied and balanced diet:",
+                dieta_fase5_alimentacion_value: "Specific frequencies for white/oily fish, white/red meats, legumes, eggs, cereals, tubers, vegetables, fruits, dairy.",
+                info_pacientes_title: "Patient Information",
+                podcast_intro1: "Listen to our podcast, where health takes the floor and rigorous information becomes a close companion for those who need answers. Today we talk about a topic of enormous health and social relevance: pathological obesity and its surgical approach.",
+                podcast_intro2: "We will delve into the most effective treatment when other methods have failed: laparoscopic gastric bypass. We will explain what this technique consists of, how patients are selected, what tests are performed before surgery, and what the postoperative process is like.",
+                podcast_intro3: "In addition, we will talk about the different phases of the diet after the intervention, medical care, the importance of multidisciplinary follow-up, and the long-term commitment that this therapeutic option requires.",
+                podcast_credits: "🎙️ This episode is based on material prepared by the Bariatric Surgery Unit of the General Surgery Service of the Virgen de la Arrixaca University Clinical Hospital, under the supervision of Dr. María Dolores Frutos Bernal, a specialist in bariatric and metabolic surgery. We thank her for her clarity, commitment, and closeness to patients.",
+                podcast_audience: "If you are considering this intervention, if you know someone who could benefit from it, or if you simply want to be well-informed… this episode is for you.",
+                podcast_motivation: "Because losing weight is not just a matter of aesthetics, but of health, quality of life, and, often, survival.",
+                podcast_start: "🩺 Let's begin!",
+                equipo_humano_title: "Our Team",
+                equipo_humano_p1: "Highly trained and specialized human team in obesity surgery. This team is composed of health professionals of the highest prestige and experience, dedicated to offering advanced and personalized treatments for patients with morbid obesity.",
+                equipo_humano_p2: "The hospital's obesity unit focuses on providing a comprehensive and multidisciplinary approach, which includes not only surgery but also postoperative follow-up and the necessary nutritional and psychological support to ensure the long-term success of the treatment.",
+                equipo_humano_p3: "The hospital is committed to using the most advanced technology and providing excellent care to each patient, always prioritizing their well-being and satisfaction.",
+                equipo_dra_frutos: "Dr. Frutos Bernal",
+                equipo_dr_balaguer: "Dr. Balaguer Román",
+                contacto_title: "Contact Us and Take the First Step",
+                contacto_subtitle: "We are here to help you. Complete the form or use our direct contact details.",
+                form_nombre: "Full Name",
+                form_email: "Email Address",
+                form_telefono: "Phone (Optional)",
+                form_mensaje: "Message",
+                form_enviar: "Send Message",
+                contacto_alternativa: "Or if you prefer:",
+                contacto_whatsapp: "Chat on WhatsApp",
+                contacto_telefono_label: "Phone:",
+                contacto_email_label: "Email:",
+                contacto_ubicacion_label: "Location:",
+                footer_copyright: "&copy; <span id=\"currentYear\"></span> [Your Clinic or Main Doctor's Name]. All rights reserved.",
+                footer_unidad: "Bariatric and Metabolic Surgery Unit",
+                footer_hospital: "Virgen de la Arrixaca University Clinical Hospital, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcia, Spain."
+            },
+            fr: {
+                meta_title: "Chirurgie Bariatrique et Métabolique - Spécialistes de l'Obésité",
+                meta_description: "Informations complètes sur le traitement chirurgical de l'obésité pathologique, y compris le bypass gastrique laparoscopique et les soins postopératoires par une équipe d'experts.",
+                meta_keywords: "chirurgie bariatrique, bypass gastrique, sleeve gastrectomie, obésité, laparoscopie, perte de poids, Arrixaca, Murcie, traitement obésité, équipe obésité",
+                og_title: "Chirurgie Bariatrique et Métabolique - Spécialistes de l'Obésité",
+                og_description: "Traitements avancés pour l'obésité morbide. Découvrez notre équipe et nos options chirurgicales.",
+                twitter_title: "Chirurgie Bariatrique et Métabolique - Spécialistes de l'Obésité",
+                twitter_description: "Traitements avancés pour l'obésité morbide. Découvrez notre équipe et nos options chirurgicales.",
+                nav_inicio: "Accueil",
+                nav_que_es_obesidad: "Qu'est-ce que l'Obésité ?",
+                nav_cirugia: "La Chirurgie",
+                nav_postoperatorio: "Postopératoire",
+                nav_dieta: "Régime",
+                nav_info_pacientes: "Infos Patients",
+                nav_equipo_humano: "Notre Équipe",
+                nav_contacto: "Contact",
+                nav_inicio_mobile: "Accueil",
+                nav_que_es_obesidad_mobile: "Qu'est-ce que l'Obésité ?",
+                nav_cirugia_mobile: "La Chirurgie",
+                nav_postoperatorio_mobile: "Postopératoire",
+                nav_dieta_mobile: "Régime et Phases",
+                nav_info_pacientes_mobile: "Infos Patients",
+                nav_equipo_humano_mobile: "Notre Équipe",
+                nav_contacto_mobile: "Contact",
+                hero_title: "Traitement Chirurgical de l'Obésité Pathologique",
+                hero_subtitle: "Bypass Gastrique par Laparoscopie. Récupérez votre santé et votre qualité de vie à l'Hôpital Clinique Universitaire Virgen de la Arrixaca.",
+                que_es_obesidad_title: "Qu'est-ce que l'Obésité ?",
+                que_es_obesidad_p1: "L'obésité est aujourd'hui considérée comme l'épidémie du XXIe siècle. C'est une maladie qui touche 15% de la population et consiste en un excès de graisse corporelle. Les causes de l'obésité sont multiples et complexes : alimentation inadéquate, manque d'exercice physique, facteurs métaboliques et génétiques.",
+                que_es_obesidad_p2: "Pour mesurer le degré d'obésité, on utilise l'Indice de Masse Corporelle (IMC), qui se calcule en divisant le poids en kilogrammes par la taille en mètres au carré. Exemple : Patient pesant 128 kg et mesurant 1,60 m. IMC : $128 / (1,60 \\times 1,60) = 50$.",
+                grados_obesidad_title: "Degrés d'Obésité (IMC)",
+                table_grado: "Degré",
+                table_imc: "IMC",
+                grado_leve: "Légère",
+                grado_moderada: "Modérée",
+                grado_severa: "Sévère",
+                grado_morbida: "MORBIDE",
+                grado_superobesidad: "Super Obésité",
+                grado_supersuperobesidad: "Super Super Obésité",
+                grado_triple: "Triple Obésité",
+                que_es_obesidad_p3: "Les personnes obèses sont plus susceptibles de souffrir de maladies graves (comorbidités) qui altéreront leur santé et leur qualité de vie, telles que l'Hypertension Artérielle, le Diabète Mellitus, les Troubles du Sommeil, l'Apnée, l'Asthme, l'Arthrose, les Douleurs Dorsales, le Reflux Gastro-œsophagien et les Troubles Menstruels. Pour toutes ces raisons, la perte de poids est nécessaire, et pour la plupart des patients atteints d'obésité pathologique, la chirurgie est la seule solution.",
+                cuando_intervenir_title: "Quand un patient obèse doit-il être opéré ?",
+                cuando_intervenir_li1: "Patients avec un IMC de 30 associé à une comorbidité.",
+                cuando_intervenir_li2: "Patients avec un IMC supérieur ou égal à 35.",
+                cuando_intervenir_li3: "Obésité maintenue pendant 5 ans avec échec d'autres traitements.",
+                cuando_intervenir_li4: "Assurance de la coopération du patient à long terme.",
+                cuando_intervenir_li5: "Consentement éclairé et acceptation du risque chirurgical.",
+                cirugia_title: "La Chirurgie : Bypass Gastrique par Laparoscopie",
+                cirugia_p1: "Les candidats à la chirurgie sont évalués par une équipe hospitalière multidisciplinaire (endocrinologues, psychologues, chirurgiens, etc.) qui décidera si le patient est un candidat. Des évaluations nutritionnelles, psychiatriques, pré-anesthésiques et chirurgicales sont effectuées.",
+                cirugia_p2: "Le patient est informé de la technique chirurgicale, des complications possibles et des résultats, et signe le consentement éclairé correspondant. L'objectif du traitement chirurgical est de parvenir à une perte de poids et de la maintenir à long terme.",
+                bypass_title: "Bypass Gastrique en Y de Roux par Laparoscopie",
+                bypass_p1: "L'intervention est réalisée sous anesthésie générale et par laparoscopie, étant moins agressive. Elle est pratiquée à travers 5-6 petites incisions par lesquelles le matériel chirurgical et une caméra sont introduits.",
+                bypass_p2: "Elle consiste à couper, agrafer et sectionner la partie supérieure de l'estomac, laissant une petite poche gastrique (réservoir gastrique) d'environ 20-30 ml. Ensuite, l'intestin est divisé et connecté au réservoir, de sorte que les aliments passent directement vers des parties plus éloignées de l'intestin grêle, contournant l'absorption des aliments sur 1,5 à 2 mètres.",
+                bypass_p3: "Cela permet de manger moins, d'atteindre la satiété plus rapidement et, comme les aliments passent dans des parties plus éloignées de l'intestin, une absorption réduite des aliments, ce qui entraîne une perte de poids.",
+                preparacion_title: "Préparation Préopératoire",
+                preparacion_p1: "Le patient est admis la veille de l'intervention. Le prétraitement comprend une thérapie pour prévenir les vomissements, des antibiotiques et une thérapie antithrombotique. Le patient doit se doucher avant l'intervention, en insistant sur l'abdomen. S'il y a des poils sur l'abdomen, ils seront rasés avec un rasoir électrique.",
+                postoperatorio_title: "Gestion et Suivi Postopératoires",
+                inmediato_postop_title: "Période Postopératoire Immédiate",
+                inmediato_postop_p1: "Après l'intervention, le patient sera transféré à l'unité de réanimation post-chirurgicale. Il sortira sans sonde nasale ni vésicale, avec des bas de compression, et certains avec un drain abdominal. Il pourra se lever dans la chambre, avec prudence la première fois. Des douleurs à l'épaule gauche et un inconfort abdominal sont fréquents. Si la tolérance est bonne, la sortie a lieu le 1er ou 2e jour postopératoire.",
+                inmediato_postop_p2: "Au début de l'alimentation liquide (24-48h plus tard), vous ressentirez une sensation de satiété. Buvez avec une paille ou par petites cuillerées lentement. Des recommandations et des traitements seront donnés à la sortie : régime bariatrique par phases, héparine sous-cutanée (25-30 jours), oméprazole, complexe vitaminique et module protéique.",
+                primeros_dias_title: "Premiers Jours à la Maison",
+                primeros_dias_p1: "Vous pouvez ressentir des douleurs abdominales diffuses, peu intenses, gérables avec du paracétamol dilué. Les douleurs thoraciques lors de la respiration s'amélioreront avec la kinésithérapie respiratoire (gonfler des ballons). Vous ne devriez pas vomir ni avoir mal à l'estomac ; si cela se produit, c'est généralement dû à une alimentation trop rapide ou excessive.",
+                primeros_dias_importante: "Important : Vous ne prendrez aucun aliment solide ni boisson gazeuse. Il existe un risque de complications (déhiscence de suture, fistules) si vous mangez des aliments solides.",
+                seguimiento_largo_plazo_title: "Suivi à Long Terme",
+                seguimiento_largo_plazo_p1: "Le suivi est assuré par des endocrinologues, des nutritionnistes, des chirurgiens et des psychologues. Il est ESSENTIEL d'être motivé, bien informé et d'accepter l'engagement de suivre les indications à vie. Les examens chirurgicaux ont lieu une semaine, 15 jours, un mois, puis à 3, 6, 12, 18, 24 mois, puis annuellement pendant au moins 5 ans. Des échographies et des études du transit gastro-intestinal (TOGD) sont réalisées pour l'évaluation.",
+                dieta_title: "Régime Postopératoire par Phases",
+                dieta_subtitle: "La progression du régime est cruciale pour la récupération et le succès à long terme. Suivez scrupuleusement les instructions de votreéquipe médicale.",
+                dieta_fase1_summary: "PHASE 1 : Protection Chirurgicale (7 premiers jours)",
+                dieta_fase1_duracion_label: "Durée :",
+                dieta_fase1_duracion_value: "7 premiers jours.",
+                dieta_fase1_objetivos_label: "Objectifs :",
+                dieta_fase1_objetivos_value: "Assurer la consolidation des sutures (régime liquide), la protection et la prévention de la dilatation du réservoir gastrique (limitation du volume).",
+                dieta_fase1_dieta_label: "Régime :",
+                dieta_fase1_dieta_value: "Texture liquide avec contrôle du volume (commencer par 30 ml, maximum 50 ml par prise en cas de Bypass). Prise lente et fractionnée (6-8 prises/jour). Hydratation avec de l'eau entre les prises (300-500 ml/jour). L'eau peut être difficile à tolérer ; aromatiser avec du citron/orange peut aider.",
+                dieta_fase1_alimentos_label: "Aliments :",
+                dieta_fase1_alimentos_value: "Eau, infusions, jus naturels dilués et filtrés, produits laitiers liquides écrémés (de préférence sans lactose), boisson végétale, bouillons de légumes et bouillons dégraissés de poulet/dinde. Éviter le café et les diurétiques jusqu'à ce que l'hydratation soit couverte. L'apport en protéines avec le module prescrit est essentiel (7-8 cuillères à soupe pour le bypass). Éliminer le sucre, utiliser de la cannelle, de la stévia, du sucralose, de l'érythritol ou du cacao à 100%.",
+                dieta_fase1_recomendaciones_label: "Recommandations :",
+                dieta_fase1_recomendaciones_value: "Introduire les nouveaux aliments un par un. Boire des liquides 30 minutes avant et 1 heure après les repas. Les prises doivent durer 30-45 minutes. Pas de liquides rapides, de grosses gorgées, de températures extrêmes, de boissons sucrées ou gazeuses. NE PAS FUMER. Arrêter de manger en cas de satiété ou de douleur. Éviter de se pencher/s'allonger 1 heure après la prise.",
+                dieta_fase2_summary: "PHASE 2 : Protection Chirurgicale (15 jours suivants)",
+                dieta_fase2_duracion_label: "Durée :",
+                dieta_fase2_duracion_value: "15 jours (après la Phase 1).",
+                dieta_fase2_dieta_label: "Régime :",
+                dieta_fase2_dieta_value: "Texture semi-liquide (crème), volume 100-150 ml. Prise lente et fractionnée (5-6 prises/jour).",
+                dieta_fase2_alimentos_label: "Aliments :",
+                dieta_fase2_alimentos_value: "Pomme de terre, légumes cuits, fruits cuits/au four (limiter la teneur élevée en fibres insolubles). Yaourt, fromage blanc, soupe de nouilles très cuites. Pain grillé type biscotte (NON ENTIER). Maintenir le module protéique et commencer le supplément multivitaminé-minéral.",
+                dieta_fase3_summary: "PHASE 3 : Protection Chirurgicale (15 jours suivants)",
+                dieta_fase3_duracion_label: "Durée :",
+                dieta_fase3_duracion_value: "15 jours (après la Phase 2).",
+                dieta_fase3_dieta_label: "Régime :",
+                dieta_fase3_dieta_value: "Texture semi-solide (purée), volume ne dépassant pas 150 ml par prise. Prise lente et fractionnée (5-6 prises/jour).",
+                dieta_fase3_alimentos_label: "Aliments :",
+                dieta_fase3_alimentos_value: "Légumineuses sans peau, viandes blanches (dinde, poulet), poisson blanc, œufs. Cuisson maintenant l'hydratation (bouilli, vapeur, four, micro-ondes). Fruits crus (en évitant les fibres insolubles). Le module protéique n'est plus pris, mais le supplément multivitaminé est maintenu à vie.",
+                dieta_fase4_summary: "PHASE 4 : Protection Chirurgicale (15 à 30 jours)",
+                dieta_fase4_duracion_label: "Durée :",
+                dieta_fase4_duracion_value: "15 à 30 jours (après la Phase 3).",
+                dieta_fase4_dieta_label: "Régime :",
+                dieta_fase4_dieta_value: "Texture solide facile à mâcher (\"écrasement manuel à la fourchette\"), volume 150-200 ml. La bouche doit être le broyeur préalable. Aucun nouvel aliment n'est introduit dans cette phase. Progression des techniques de cuisson : bouilli, vapeur, four, micro-ondes, puis grillé.",
+                dieta_fase4_clave_label: "Clé :",
+                dieta_fase4_clave_value: "La mastication et le broyage buccal sont essentiels. Une prise rapide sans mastication adéquate peut provoquer des douleurs.",
+                dieta_fase5_summary: "PHASE 5 : Tolérance (Régime Normalisé et Sain)",
+                dieta_fase5_duracion_label: "Durée :",
+                dieta_fase5_duracion_value: "Une fois la Phase 4 terminée.",
+                dieta_fase5_dieta_label: "Régime :",
+                dieta_fase5_dieta_value: "Introduction progressive d'aliments plus difficiles à tolérer : viandes blanches fibreuses (lapin), poissons gras, viandes rouges, poissons durs (seiche, calmar), légumes verts crus à feuilles, tomate (initialement sans peau), céréales et dérivés (riz, pâtes, pain), fruits (agrumes). La texture n'est pas modifiée, mais introduire avec progression dans les techniques culinaires. Volume 150-200 ml. Prioriser les aliments protéinés si l'objectif n'est pas atteint par la prise.",
+                dieta_fase5_alimentacion_label: "Alimentation variée et équilibrée :",
+                dieta_fase5_alimentacion_value: "Fréquences spécifiques pour poissons blancs/gras, viandes blanches/rouges, légumineuses, œufs, céréales, tubercules, légumes, fruits, produits laitiers.",
+                info_pacientes_title: "Informations pour les Patients",
+                podcast_intro1: "Écoutez notre podcast, où la santé prend la parole et l'information rigoureuse devient une compagnie proche pour ceux qui ont besoin de réponses. Aujourd'hui, nous parlons d'un sujet d'une énorme pertinence sanitaire et sociale : l'obésité pathologique et son approche chirurgicale.",
+                podcast_intro2: "Nous nous plongerons dans le traitement le plus efficace lorsque d'autres méthodes ont échoué : le bypass gastrique par laparoscopie. Nous vous expliquerons en quoi consiste cette technique, comment les patients sont sélectionnés, quels tests sont réalisés avant la chirurgie et comment se déroule le processus postopératoire.",
+                podcast_intro3: "De plus, nous parlerons des différentes phases du régime après l'intervention, des soins médicaux, de l'importance du suivi multidisciplinaire et de l'engagement à long terme que requiert cette option thérapeutique.",
+                podcast_credits: "🎙️ Cet épisode est basé sur le matériel élaboré par l'Unité de Chirurgie Bariatrique du Service de Chirurgie Générale de l'Hôpital Clinique Universitaire Virgen de la Arrixaca, sous la supervision du Dr María Dolores Frutos Bernal, spécialiste en chirurgie bariatrique et métabolique. Nous la remercions pour sa clarté, son engagement et sa proximité avec les patients.",
+                podcast_audience: "Si vous envisagez cette intervention, si vous connaissez quelqu'un qui pourrait en bénéficier ou si vous souhaitez simplement être bien informé… cet épisode est pour vous.",
+                podcast_motivation: "Parce que perdre du poids n'est pas seulement une question d'esthétique, mais de santé, de qualité de vie et, souvent, de survie.",
+                podcast_start: "🩺 Commençons !",
+                equipo_humano_title: "Notre Équipe",
+                equipo_humano_p1: "Une équipe humaine hautement qualifiée et spécialisée en chirurgie de l'obésité. Cette équipe est composée de professionnels de la santé de très grand prestige et expérience, dédiés à offrir des traitements avancés et personnalisés aux patients atteints d'obésité morbide.",
+                equipo_humano_p2: "L'unité d'obésité de l'hôpital se concentre sur une approche globale et multidisciplinaire, qui comprend non seulement la chirurgie, mais aussi le suivi postopératoire et le soutien nutritionnel et psychologique nécessaires pour assurer le succès à long terme du traitement.",
+                equipo_humano_p3: "L'hôpital s'engage à utiliser la technologie la plus avancée et à offrir d'excellents soins à chaque patient, en accordant toujours la priorité à son bien-être et à sa satisfaction.",
+                equipo_dra_frutos: "Dr. Frutos Bernal",
+                equipo_dr_balaguer: "Dr. Balaguer Román",
+                contacto_title: "Contactez-nous et Faites le Premier Pas",
+                contacto_subtitle: "Nous sommes là pour vous aider. Remplissez le formulaire ou utilisez nos coordonnées directes.",
+                form_nombre: "Nom Complet",
+                form_email: "Adresse E-mail",
+                form_telefono: "Téléphone (Optionnel)",
+                form_mensaje: "Message",
+                form_enviar: "Envoyer le Message",
+                contacto_alternativa: "Ou si vous préférez :",
+                contacto_whatsapp: "Discuter sur WhatsApp",
+                contacto_telefono_label: "Téléphone :",
+                contacto_email_label: "E-mail :",
+                contacto_ubicacion_label: "Lieu :",
+                footer_copyright: "&copy; <span id=\"currentYear\"></span> [Nom de votre Clinique ou Docteur Principal]. Tous droits réservés.",
+                footer_unidad: "Unité de Chirurgie Bariatrique et Métabolique",
+                footer_hospital: "Hôpital Clinique Universitaire Virgen de la Arrixaca, Carretera Madrid-Cartagena, s/n, 30120 El Palmar, Murcie, Espagne."
+            }
+        };
+
+        // Función para cambiar el idioma
+        function setLanguage(lang) {
+            document.documentElement.lang = lang; // Actualiza el atributo lang del HTML
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'TITLE' || element.tagName === 'META') {
+                        if (element.name === 'description' || element.name === 'keywords' || 
+                            element.name === 'twitter:description' || element.name === 'twitter:title' ||
+                            element.getAttribute('property') === 'og:title' || element.getAttribute('property') === 'og:description') {
+                            element.content = translations[lang][key];
+                        } else if (element.tagName === 'TITLE') {
+                             document.title = translations[lang][key];
+                        }
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            // Sincronizar ambos selectores
+            document.getElementById('language-selector').value = lang;
+            document.getElementById('language-selector-mobile').value = lang;
+        }
+
+        // Event Listeners para los selectores de idioma
+        document.getElementById('language-selector').addEventListener('change', function() {
+            setLanguage(this.value);
+        });
+         document.getElementById('language-selector-mobile').addEventListener('change', function() {
+            setLanguage(this.value);
+        });
+
+
+        // Scroll al inicio de la página al cargar y establecer idioma por defecto
         window.onload = function() {
             window.scrollTo(0, 0);
+            setLanguage('es'); // Establecer español como idioma por defecto
         };
 
         // Script para el menú móvil
@@ -560,11 +1044,9 @@
                     icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
                 }
             });
-            // Cerrar menú al hacer clic en un enlace del menú móvil
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('mobile-menu-hidden');
-                    // Restaurar icono de hamburguesa
                     mobileMenuButton.querySelector('i').classList.remove('fa-times');
                     mobileMenuButton.querySelector('i').classList.add('fa-bars');
                 });
@@ -581,7 +1063,17 @@
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 setTimeout(() => {
-                    alert('Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.');
+                    const enviarKey = contactForm.querySelector('[data-translate-key="form_enviar"]').dataset.translateKey;
+                    const currentLang = document.documentElement.lang || 'es';
+                    let alertMsg = "Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.";
+                    if (translations[currentLang] && translations[currentLang].form_alert_success) {
+                        alertMsg = translations[currentLang].form_alert_success;
+                    } else if (currentLang === 'en') {
+                         alertMsg = "Contact form submitted (simulation). You will need to configure a backend to receive messages.";
+                    } else if (currentLang === 'fr') {
+                        alertMsg = "Formulaire de contact envoyé (simulation). Vous devrez configurer un backend pour recevoir les messages.";
+                    }
+                    alert(alertMsg);
                     contactForm.reset(); 
                 }, 1000);
             });
