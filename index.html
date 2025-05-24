@@ -163,42 +163,40 @@
         .media-text-layout { 
             display: flex;
             flex-direction: column; /* Apilado por defecto en móviles */
-            gap: 1.5rem; /* Espacio entre texto y media */
-            align-items: center; /* Centra los items en modo columna */
+            gap: 2rem; /* Aumentado el espacio entre texto y media */
+            align-items: center; 
         }
         @media (min-width: 768px) { /* md: */
             .media-text-layout {
-                flex-direction: row; /* Lado a lado en pantallas medianas y grandes */
-                align-items: flex-start; /* Alinea items al inicio en modo fila */
+                flex-direction: row; 
+                align-items: flex-start; 
             }
-            .media-text-layout > .text-content {
-                flex: 3; /* El texto ocupa más espacio (ej. 60%) */
-                padding-right: 1rem; /* Espacio si el medio está a la derecha */
-            }
+            .media-text-layout > .text-content,
             .media-text-layout > .media-content {
-                flex: 2; /* El medio ocupa menos espacio (ej. 40%) */
-                padding-left: 1rem; /* Espacio si el medio está a la izquierda */
+                flex: 1; /* Distribuye el espacio equitativamente */
             }
-            /* Para alternar la posición de la imagen/video */
-            .media-text-layout.media-right > .text-content { padding-right: 0; padding-left: 1rem; order: 1; }
-            .media-text-layout.media-right > .media-content { padding-left: 0; padding-right: 1rem; order: 2; }
+            .media-text-layout > .text-content { padding-right: 1.5rem; } /* Más espacio */
+            .media-text-layout > .media-content { padding-left: 1.5rem; } /* Más espacio */
+
+            .media-text-layout.media-right > .text-content { padding-right: 0; padding-left: 1.5rem; order: 1; }
+            .media-text-layout.media-right > .media-content { padding-left: 0; padding-right: 1.5rem; order: 2; }
         }
-        .media-content img, .media-content .video-wrapper { /* Estilos para el contenedor de la imagen/video */
-            border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); /* shadow-md */
-            width: 100%;
-            max-width: 450px; /* Limita el ancho máximo del medio */
+        .media-content img, .media-content .video-wrapper { 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); 
+            width: 100%; /* Ocupa el ancho de su contenedor flex */
+            /* max-width: 450px; ELIMINADO para que sea más grande, controlado por flex */
             margin-left: auto;
             margin-right: auto;
         }
-         .media-content img, .media-content video { /* Asegura que la imagen/video dentro del wrapper sea responsiva */
+         .media-content img, .media-content video { 
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 0.5rem; /* Si el wrapper no tiene overflow:hidden */
+            border-radius: 0.5rem; 
         }
-        .video-wrapper { /* Contenedor específico para videos */
-            overflow: hidden; /* Asegura que el video respete el border-radius */
+        .video-wrapper { 
+            overflow: hidden; 
         }
 
         /* Estilos para Tarjetas de Miembros del Equipo */
@@ -221,22 +219,21 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .team-member-card img {
-            width: 100%; /* Ocupa el ancho de la tarjeta */
-            max-width: 200px; /* Limita el ancho máximo de la foto */
-            height: auto; /* Mantiene la proporción */
-            aspect-ratio: 3 / 4; /* Proporción para rectángulo vertical, ajusta según necesidad */
-            object-fit: cover; /* Cubre el área designada, puede recortar si la proporción no coincide exacto */
-            /* object-position: top center; */ /* Para priorizar la parte superior de la imagen si se recorta */
-            border-radius: 0.375rem; /* rounded-md, para esquinas suavizadas en el rectángulo */
+            width: 100%; 
+            max-width: 220px; /* Aumentado ligeramente el tamaño máximo */
+            height: auto; 
+            aspect-ratio: 3 / 4; 
+            object-fit: cover; 
+            border-radius: 0.375rem; 
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 1rem; /* Espacio debajo de la foto */
-            border: 2px solid #e5e7eb; /* Borde gris claro */
+            margin-bottom: 1rem; 
+            border: 2px solid #e5e7eb; 
         }
         .team-member-card .member-name {
-            font-weight: 600; /* semibold */
-            color: #1e3a8a; /* text-blue-900 */
-            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; 
+            color: #1e3a8a; 
+            font-size: 1.125rem; 
         }
 
     </style>
@@ -252,10 +249,10 @@
                 <a href="#inicio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
                 <a href="#que-es-obesidad" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Qué es la Obesidad</a>
                 <a href="#cirugia" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">La Cirugía</a>
-                <a href="#equipo-humano" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Equipo Humano</a>
                 <a href="#postoperatorio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Postoperatorio</a>
                 <a href="#dieta" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Dieta</a>
                 <a href="#audio-info" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Audio Pacientes</a>
+                <a href="#equipo-humano" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Equipo Humano</a>
                 <a href="#contacto" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
             </nav>
             <div class="md:hidden">
@@ -268,10 +265,10 @@
             <a href="#inicio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Inicio</a>
             <a href="#que-es-obesidad" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Qué es la Obesidad</a>
             <a href="#cirugia" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">La Cirugía</a>
-            <a href="#equipo-humano" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Equipo Humano</a>
             <a href="#postoperatorio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Postoperatorio</a>
             <a href="#dieta" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Dieta y Fases</a>
             <a href="#audio-info" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Audio Pacientes</a>
+            <a href="#equipo-humano" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Equipo Humano</a>
             <a href="#contacto" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Contacto</a>
         </div>
     </header>
@@ -355,27 +352,7 @@
             </div>
         </section>
         
-        <section id="equipo-humano" class="py-12 md:py-16">
-            <div class="container mx-auto px-4 sm:px-6 section-container">
-                <h2 class="text-center">Nuestro Equipo Humano</h2>
-                <p class="text-gray-700 mt-8 mb-4">Equipo humano altamente capacitado y especializado en cirugía de obesidad. Este equipo está integrado por profesionales sanitarios de máximo prestigio y experiencia, dedicados a ofrecer tratamientos avanzados y personalizados para pacientes con obesidad mórbida.</p>
-                <p class="text-gray-700 mb-4">La unidad de obesidad del hospital se enfoca en proporcionar un enfoque integral y multidisciplinario, que incluye no solo la cirugía, sino también el seguimiento postoperatorio y el apoyo nutricional y psicológico necesario para asegurar el éxito a largo plazo del tratamiento.</p>
-                <p class="text-gray-700 mb-8">El hospital se compromete a utilizar la tecnología más avanzada y a brindar un trato excelente a cada paciente, manteniendo siempre como prioridad su bienestar y satisfacción.</p>
-                
-                <div class="team-grid">
-                    <div class="team-member-card">
-                        <img src="recursos/img/Coco.jpg" alt="[Foto de la Dra. Frutos Bernal]">
-                        <p class="member-name mt-4">Dra. Frutos Bernal</p>
-                    </div>
-                    <div class="team-member-card">
-                        <img src="recursos/img/Andres.jpg" alt="[Foto del Dr. Balaguer Román]">
-                        <p class="member-name mt-4">Dr. Balaguer Román</p>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <section id="postoperatorio" class="bg-slate-100 py-12 md:py-16">
+        <section id="postoperatorio" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">Manejo y Seguimiento Postoperatorio</h2>
                 
@@ -403,7 +380,7 @@
             </div>
         </section>
 
-        <section id="dieta" class="py-12 md:py-16">
+        <section id="dieta" class="bg-slate-100 py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container">
                 <h2 class="text-center">Dieta Postoperatoria por Fases</h2>
                 <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto">La progresión de la dieta es crucial para la recuperación y el éxito a largo plazo. Siga estrictamente las indicaciones de su equipo médico.</p>
@@ -458,7 +435,7 @@
             </div>
         </section>
         
-        <section id="audio-info" class="bg-slate-100 py-12 md:py-16">
+        <section id="audio-info" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container text-center">
                 <h2 class="mb-6">Información Adicional para Pacientes</h2>
                 <p class="mb-6 text-gray-700">Escucha esta guía con información importante sobre tu proceso:</p>
@@ -467,6 +444,26 @@
                     <source src="recursos/guiapacientes.m4a" type="audio/mp4">
                     Tu navegador no soporta el elemento de audio.
                 </audio>
+            </div>
+        </section>
+
+        <section id="equipo-humano" class="bg-slate-100 py-12 md:py-16">
+            <div class="container mx-auto px-4 sm:px-6 section-container">
+                <h2 class="text-center">Nuestro Equipo Humano</h2>
+                <p class="text-gray-700 mt-8 mb-4">Equipo humano altamente capacitado y especializado en cirugía de obesidad. Este equipo está integrado por profesionales sanitarios de máximo prestigio y experiencia, dedicados a ofrecer tratamientos avanzados y personalizados para pacientes con obesidad mórbida.</p>
+                <p class="text-gray-700 mb-4">La unidad de obesidad del hospital se enfoca en proporcionar un enfoque integral y multidisciplinario, que incluye no solo la cirugía, sino también el seguimiento postoperatorio y el apoyo nutricional y psicológico necesario para asegurar el éxito a largo plazo del tratamiento.</p>
+                <p class="text-gray-700 mb-8">El hospital se compromete a utilizar la tecnología más avanzada y a brindar un trato excelente a cada paciente, manteniendo siempre como prioridad su bienestar y satisfacción.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member-card">
+                        <img src="recursos/img/Coco.jpg" alt="[Foto de la Dra. Frutos Bernal]">
+                        <p class="member-name mt-4">Dra. Frutos Bernal</p>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="recursos/img/Andres.jpg" alt="[Foto del Dr. Balaguer Román]">
+                        <p class="member-name mt-4">Dr. Balaguer Román</p>
+                    </div>
+                </div>
             </div>
         </section>
 
