@@ -185,7 +185,6 @@
             border-radius: 0.5rem; 
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); 
             width: 100%; /* Ocupa el ancho de su contenedor flex */
-            /* max-width: 450px; ELIMINADO para que sea más grande, controlado por flex */
             margin-left: auto;
             margin-right: auto;
         }
@@ -235,6 +234,19 @@
             color: #1e3a8a; 
             font-size: 1.125rem; 
         }
+        /* Estilos para la sección Info Pacientes (Podcast) */
+        #info-pacientes .podcast-description p {
+            margin-bottom: 1rem; /* Espacio entre párrafos de la descripción */
+            line-height: 1.6; /* Interlineado para mejor lectura */
+            text-align: left; /* Alineación a la izquierda para el texto largo */
+        }
+         #info-pacientes .podcast-description {
+            max-width: 3xl; /* Limita el ancho del texto para mejor legibilidad */
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem; /* Espacio antes del reproductor de audio */
+        }
+
 
     </style>
 </head>
@@ -251,7 +263,7 @@
                 <a href="#cirugia" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">La Cirugía</a>
                 <a href="#postoperatorio" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Postoperatorio</a>
                 <a href="#dieta" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Dieta</a>
-                <a href="#audio-info" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Audio Pacientes</a>
+                <a href="#info-pacientes" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Info Pacientes</a>
                 <a href="#equipo-humano" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Equipo Humano</a>
                 <a href="#contacto" class="text-gray-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
             </nav>
@@ -267,7 +279,7 @@
             <a href="#cirugia" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">La Cirugía</a>
             <a href="#postoperatorio" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Postoperatorio</a>
             <a href="#dieta" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Dieta y Fases</a>
-            <a href="#audio-info" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Audio Pacientes</a>
+            <a href="#info-pacientes" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Info Pacientes</a>
             <a href="#equipo-humano" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Equipo Humano</a>
             <a href="#contacto" class="block px-6 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-medium">Contacto</a>
         </div>
@@ -435,11 +447,19 @@
             </div>
         </section>
         
-        <section id="audio-info" class="py-12 md:py-16">
+        <section id="info-pacientes" class="py-12 md:py-16">
             <div class="container mx-auto px-4 sm:px-6 section-container text-center">
-                <h2 class="mb-6">Información Adicional para Pacientes</h2>
-                <p class="mb-6 text-gray-700">Escucha esta guía con información importante sobre tu proceso:</p>
-                <audio controls class="mx-auto shadow-lg rounded-md w-full max-w-md">
+                <h2 class="mb-6">Información para Pacientes</h2>
+                <div class="podcast-description text-gray-700">
+                    <p>Escucha nuestro podcast, donde la salud toma la palabra y la información rigurosa se convierte en compañía cercana para quienes necesitan respuestas. Hoy hablamos de un tema de enorme relevancia sanitaria y social: la obesidad patológica y su abordaje quirúrgico.</p>
+                    <p>Nos sumergiremos en el tratamiento más eficaz cuando otros métodos han fallado: el bypass gástrico por laparoscopia. Te explicaremos en qué consiste esta técnica, cómo se seleccionan los pacientes, qué pruebas se realizan antes de la cirugía y cómo es el proceso postoperatorio.</p>
+                    <p>Además, hablaremos de las distintas fases de la dieta tras la intervención, los cuidados médicos, la importancia del seguimiento multidisciplinar, y el compromiso a largo plazo que requiere esta opción terapéutica.</p>
+                    <p>🎙️ Este episodio se basa en el material elaborado por la Unidad de Cirugía Bariátrica del Servicio de Cirugía General del Hospital Clínico Universitario Virgen de la Arrixaca, bajo la supervisión de la Dra. María Dolores Frutos Bernal, especialista en cirugía bariátrica y metabólica. A ella le agradecemos su claridad, su compromiso y su cercanía con los pacientes.</p>
+                    <p>Si estás considerando esta intervención, si conoces a alguien que pueda beneficiarse de ella o simplemente quieres estar bien informado… este episodio es para ti.</p>
+                    <p>Porque perder peso no es solo una cuestión de estética, sino de salud, de calidad de vida y, muchas veces, de supervivencia.</p>
+                    <p>🩺 ¡Empezamos!</p>
+                </div>
+                <audio controls class="mx-auto shadow-lg rounded-md w-full max-w-md mt-8">
                     <source src="recursos/guiapacientes.mp3" type="audio/mpeg">
                     <source src="recursos/guiapacientes.m4a" type="audio/mp4">
                     Tu navegador no soporta el elemento de audio.
