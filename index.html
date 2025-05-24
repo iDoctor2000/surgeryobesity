@@ -3,9 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Los meta tags de título y descripción también necesitarían ser dinámicos
-         o tener versiones específicas por idioma si se busca un SEO multilingüe completo,
-         lo cual es más complejo con una solución puramente JavaScript. -->
     <title data-translate-key="meta_title">Cirugía Bariátrica y Metabólica - Especialistas en Obesidad</title>
     <meta name="description" data-translate-key="meta_description" content="Información completa sobre el tratamiento quirúrgico de la obesidad patológica, incluyendo bypass gástrico, manga gástrica y cuidados postoperatorios por un equipo experto.">
     <meta name="keywords" data-translate-key="meta_keywords" content="cirugía bariátrica, bypass gástrico, manga gástrica, obesidad, laparoscopia, pérdida de peso, Arrixaca, Murcia, tratamiento obesidad, equipo obesidad">
@@ -13,15 +10,11 @@
 
     <meta property="og:title" data-translate-key="og_title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
     <meta property="og:description" data-translate-key="og_description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
-    <meta property="og:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png">
-    <meta property="og:url" content="https://www.tusitioweb.com/">
-    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <meta property="og:url" content="https://www.tusitioweb.com/"> <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES"> <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" data-translate-key="twitter_title" content="Cirugía Bariátrica y Metabólica - Especialistas en Obesidad">
     <meta name="twitter:description" data-translate-key="twitter_description" content="Tratamientos avanzados para la obesidad mórbida. Conoce a nuestro equipo y las opciones quirúrgicas.">
-    <meta name="twitter:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png">
-
-    <link rel="icon" href="recursos/img/favicon.ico" type="image/x-icon">
+    <meta name="twitter:image" content="https://www.tusitioweb.com/recursos/img/Logo1.png"> <link rel="icon" href="recursos/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="recursos/img/favicon.ico" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -711,6 +704,7 @@
                 form_telefono: "Teléfono (Opcional)",
                 form_mensaje: "Mensaje",
                 form_enviar: "Enviar Mensaje",
+                form_alert_success: "Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.",
                 contacto_alternativa: "O si lo prefieres:",
                 contacto_whatsapp: "Chatear por WhatsApp",
                 contacto_telefono_label: "Teléfono:",
@@ -846,6 +840,7 @@
                 form_telefono: "Phone (Optional)",
                 form_mensaje: "Message",
                 form_enviar: "Send Message",
+                form_alert_success: "Contact form submitted (simulation). You will need to configure a backend to receive messages.",
                 contacto_alternativa: "Or if you prefer:",
                 contacto_whatsapp: "Chat on WhatsApp",
                 contacto_telefono_label: "Phone:",
@@ -981,6 +976,7 @@
                 form_telefono: "Téléphone (Optionnel)",
                 form_mensaje: "Message",
                 form_enviar: "Envoyer le Message",
+                form_alert_success: "Formulaire de contact envoyé (simulation). Vous devrez configurer un backend pour recevoir les messages.",
                 contacto_alternativa: "Ou si vous préférez :",
                 contacto_whatsapp: "Discuter sur WhatsApp",
                 contacto_telefono_label: "Téléphone :",
@@ -1063,16 +1059,8 @@
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 setTimeout(() => {
-                    const enviarKey = contactForm.querySelector('[data-translate-key="form_enviar"]').dataset.translateKey;
                     const currentLang = document.documentElement.lang || 'es';
-                    let alertMsg = "Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.";
-                    if (translations[currentLang] && translations[currentLang].form_alert_success) {
-                        alertMsg = translations[currentLang].form_alert_success;
-                    } else if (currentLang === 'en') {
-                         alertMsg = "Contact form submitted (simulation). You will need to configure a backend to receive messages.";
-                    } else if (currentLang === 'fr') {
-                        alertMsg = "Formulaire de contact envoyé (simulation). Vous devrez configurer un backend pour recevoir les messages.";
-                    }
+                    let alertMsg = translations[currentLang].form_alert_success || "Formulario de contacto enviado (simulación). Necesitarás configurar un backend para recibir los mensajes.";
                     alert(alertMsg);
                     contactForm.reset(); 
                 }, 1000);
